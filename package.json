@@ -12,7 +12,10 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.10",
     "@react-native-community/netinfo": "^9.3.0",
+    "@react-native-masked-view/masked-view": "^0.2.8",
     "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.1",
+    "@react-navigation/stack": "^6.3.2",
     "@umijs/hooks": "^1.9.3",
     "dayjs": "^1.11.4",
     "idx": "^2.5.6",
@@ -21,6 +24,7 @@
     "prop-types": "^15.8.1",
     "react": "17.0.2",
     "react-fast-compare": "^3.2.0",
+    "react-hook-form": "^7.38.0",
     "react-native": "0.67.4",
     "react-native-animated-spinkit": "^1.5.2",
     "react-native-config": "^1.4.6",

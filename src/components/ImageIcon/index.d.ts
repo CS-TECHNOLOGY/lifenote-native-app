@@ -28,7 +28,7 @@ interface ImageIconProps extends ImageProps {
   margin?: number | [number, number] | [number, number, number, number];
   padding?: number | [number, number] | [number, number, number, number];
   pressable?: boolean;
-  name: 'GOOGLE' | 'ARROW_RIGHT';
+  name: 'GOOGLE' | 'ARROW_RIGHT' | 'GO_BACK';
 }
 
 export default function ImageIcon(props: ImageIconProps): {};

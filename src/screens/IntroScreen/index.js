@@ -1,6 +1,6 @@
 import React, { useRef, useCallback } from 'react';
 import Swiper from 'react-native-swiper';
-import { Box, Text } from '../../components';
+import { Box } from '../../components';
 import Intro from './Intro';
 const IntroScreen = () => {
   const swiper = useRef();

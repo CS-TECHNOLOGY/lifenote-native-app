@@ -63,14 +63,14 @@ export const DefaultHeaderHeightWithInset = () => {
   let headerHeight;
   if (Platform.OS === 'ios') {
     if (Platform.isPad) {
-      headerHeight = 50;
+      headerHeight = 45;
     } else {
       headerHeight = 44;
     }
   } else if (Platform.OS === 'android') {
-    headerHeight = 56;
+    headerHeight = 45;
   } else {
-    headerHeight = 64;
+    headerHeight = 50;
   }
   return headerHeight + insets.top;
 };
@@ -83,12 +83,12 @@ export const getDefaultHeaderHeight = () => {
     if (Platform.isPad) {
       headerHeight = 45;
     } else {
-      headerHeight = 39;
+      headerHeight = 35;
     }
   } else if (Platform.OS === 'android') {
-    headerHeight = 40;
+    headerHeight = 45;
   } else {
-    headerHeight = 50;
+    headerHeight = 45;
   }
 
   if (isIphoneX()) {

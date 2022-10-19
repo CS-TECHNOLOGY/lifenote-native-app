@@ -7,6 +7,7 @@ import StatusBarCS from './StatusBarCS';
 import TextMarquee from './TextMarquee';
 import ImageLottie from './ImageLottie';
 import ButtonCustomize from './ButtonCustomize';
+import NavBar from './NavBar';
 
 export {
   Box,
@@ -18,6 +19,7 @@ export {
   TextMarquee,
   ImageLottie,
   ButtonCustomize,
+  NavBar,
 };
 
 export default {
@@ -30,4 +32,5 @@ export default {
   TextMarquee,
   ImageLottie,
   ButtonCustomize,
+  NavBar,
 };
