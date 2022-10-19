@@ -1,9 +1,9 @@
 export default {
   CS_RED: '#D93744',
-  CS_DARK_RED: '#7A2827',
+  CS_DARK_RED: '#FF8E3A',
   CS_PURPLE: '#800080',
   CS_PINK: '#bc8f8f',
-  CS_BLUE: '#4169e1',
+  CS_BLUE: '#6062AC',
   CSS_BROWN: '#8b4513',
   CS_SALMON: '#fa8072',
   CS_ORANGE: '#EBAF65',

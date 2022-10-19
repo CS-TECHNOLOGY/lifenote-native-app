@@ -32,7 +32,7 @@ const Intro = ({ one, two, three, onDone, onNext }) => {
   return (
     <Box
       padding={[getStatusBarHeight() + 50, 15, 0, 15]}
-      background={Colors.CS_GREEN}
+      background={Colors.CS_BLUE}
       flex={1}
       align="center">
       <Text

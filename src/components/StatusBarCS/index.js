@@ -21,7 +21,7 @@ StatusBarCS.propTypes = {
 
 StatusBarCS.defaultProps = {
   barStyle: 'light-content',
-  bgColor: Colors.CS_GREEN,
+  bgColor: Colors.CS_BLUE,
 };
 
 export default StatusBarCS;
