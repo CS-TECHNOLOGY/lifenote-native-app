@@ -1,11 +1,11 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import IntroScreen from './screens/IntroScreen';
+import Router from './routers/index';
 
 const Root = () => {
   return (
     <NavigationContainer>
-      <IntroScreen />
+      <Router />
     </NavigationContainer>
   );
 };

@@ -1,13 +1,17 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useRef, useCallback } from 'react';
 import Swiper from 'react-native-swiper';
 import { Box } from '../../components';
 import Intro from './Intro';
 const IntroScreen = () => {
   const swiper = useRef();
+  const navigation = useNavigation();
   const onNext = useCallback(() => {
     swiper.current?.scrollBy(1);
   }, []);
-  const onDone = useCallback(() => {}, []);
+  const onDone = useCallback(() => {
+    navigation.navigate('Login');
+  }, []);
   return (
     <Box flex={1}>
       <Swiper
@@ -20,7 +24,7 @@ const IntroScreen = () => {
         automaticallyAdjustContentInsets>
         <Intro one onNext={onNext} />
         <Intro two onNext={onNext} />
-        <Intro three onNext={onDone} />
+        <Intro three onDone={onDone} />
       </Swiper>
     </Box>
   );
