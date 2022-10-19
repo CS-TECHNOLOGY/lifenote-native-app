@@ -1,6 +1,6 @@
 import Colors from './colors';
 import Images from './images';
-import Lotties from './lotties';
+import Lottie from './lottie';
 
-export { Colors, Images, Lotties };
-export default { Colors, Images, Lotties };
+export { Colors, Images, Lottie };
+export default { Colors, Images, Lottie };

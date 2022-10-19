@@ -1,11 +1,11 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import { Text } from './components';
+import IntroScreen from './screens/IntroScreen';
 
 const Root = () => {
   return (
     <NavigationContainer>
-      <Text>xIN CHÀO</Text>
+      <IntroScreen />
     </NavigationContainer>
   );
 };

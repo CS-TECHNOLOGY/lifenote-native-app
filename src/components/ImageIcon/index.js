@@ -28,7 +28,7 @@ const ImageIcon = ({
     return (
       <Box pressable {...boxProps} onPress={onPress} disabled={disabled}>
         <FastImage
-          source={images[name]}
+          source={name}
           resizeMode="contain"
           style={StyleSheet.flatten([
             styles.defaultStyle,
@@ -45,7 +45,7 @@ const ImageIcon = ({
 
   return (
     <FastImage
-      source={images[name]}
+      source={name}
       resizeMode="contain"
       style={StyleSheet.flatten([
         styles.defaultStyle,

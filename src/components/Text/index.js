@@ -34,8 +34,7 @@ const Text = ({ style, children, margin, padding, type, ...rest }) => {
         style,
       ])}
       allowFontScaling={false}
-      {...rest}
-    >
+      {...rest}>
       {children}
     </RNText>
   );

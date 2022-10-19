@@ -1,10 +1,7 @@
 export default {
   CS_RED: '#D93744',
   CS_DARK_RED: '#7A2827',
-  CS_GOLD: '#BF9000',
-  CS_YELLOW: '#FBC421',
   CS_PURPLE: '#800080',
-  CS_VIOLET: '#663399',
   CS_PINK: '#bc8f8f',
   CS_BLUE: '#4169e1',
   CSS_BROWN: '#8b4513',
@@ -14,9 +11,9 @@ export default {
   CS_OLIVE: '#808000',
   CS_ERROR: '#dc143c',
   CS_SKY_BLUE: '#00bfff',
-  CS_GREEN: '#6b8e23',
   CS_BACK_GROUND: '#fff5ee',
   CS_BLACK: '#000000',
   CS_GRAY: '#9a9a9a',
   TRANSPARENT: 'transparent',
+  CS_GREEN: '#d3d399',
 };
