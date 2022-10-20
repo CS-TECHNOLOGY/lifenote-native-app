@@ -8,6 +8,7 @@ import TextMarquee from './TextMarquee';
 import ImageLottie from './ImageLottie';
 import ButtonCustomize from './ButtonCustomize';
 import NavBar from './NavBar';
+import InputCustomize from './InputCustomize';
 
 export {
   Box,
@@ -20,6 +21,7 @@ export {
   ImageLottie,
   ButtonCustomize,
   NavBar,
+  InputCustomize,
 };
 
 export default {
@@ -33,4 +35,5 @@ export default {
   ImageLottie,
   ButtonCustomize,
   NavBar,
+  InputCustomize,
 };

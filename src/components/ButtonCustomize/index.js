@@ -33,6 +33,7 @@ const ButtonCustomize = ({
       flexDirection="row"
       justify="center"
       align="center"
+      shadowDepth={1}
       style={[
         styles.normal,
         {
@@ -50,7 +51,7 @@ const ButtonCustomize = ({
           <ImageIcon
             name={leftImage}
             size={leftSizeImage ?? 14}
-            margin={[0, 5]}
+            margin={[0, 15]}
             style={styleImageLeft}
             tintColor={tintColorLeft ?? color}
           />
@@ -83,8 +84,7 @@ const ButtonCustomize = ({
 };
 const styles = StyleSheet.create({
   normal: {
-    borderWidth: 2,
-    borderRadius: 8,
+    borderRadius: normalize(100),
     width: '100%',
     height: normalize(45),
   },

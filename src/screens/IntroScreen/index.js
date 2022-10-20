@@ -10,7 +10,7 @@ const IntroScreen = () => {
     swiper.current?.scrollBy(1);
   }, []);
   const onDone = useCallback(() => {
-    navigation.navigate('Login');
+    navigation.navigate('LoginScreen');
   }, []);
   return (
     <Box flex={1}>
