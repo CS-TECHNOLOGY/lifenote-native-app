@@ -9,6 +9,7 @@ import ImageLottie from './ImageLottie';
 import ButtonCustomize from './ButtonCustomize';
 import NavBar from './NavBar';
 import InputCustomize from './InputCustomize';
+import InputItem from './InputItem';
 
 export {
   Box,
@@ -22,6 +23,7 @@ export {
   ButtonCustomize,
   NavBar,
   InputCustomize,
+  InputItem,
 };
 
 export default {
@@ -36,4 +38,5 @@ export default {
   ButtonCustomize,
   NavBar,
   InputCustomize,
+  InputItem,
 };

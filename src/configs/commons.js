@@ -83,7 +83,7 @@ export const getDefaultHeaderHeight = () => {
     if (Platform.isPad) {
       headerHeight = 45;
     } else {
-      headerHeight = 35;
+      headerHeight = 30;
     }
   } else if (Platform.OS === 'android') {
     headerHeight = 45;

@@ -15,5 +15,8 @@ const styles = StyleSheet.create({
     borderBottomColor: Colors.CS_PURPLE,
     borderBottomWidth: 1,
   },
+  widthHorizontalFull: {
+    width: '70%',
+  },
 });
 export default styles;

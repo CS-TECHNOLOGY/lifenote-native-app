@@ -38,12 +38,18 @@ const NavBar = React.memo(
         style={[border && styles.viewHeight]}
         margin={[Platform.OS === 'ios' ? getStatusBarHeight() : 0, 0, 0, 0]}>
         <Box
-          style={styles.widthHorizontal}
+          style={
+            !title && label
+              ? styles.widthHorizontalFull
+              : styles.widthHorizontal
+          }
           padding={[0, 15, 0, 0]}
           justify="flex-start"
           flexDirection="row"
           align="center"
-          height={'100%'}>
+          height={'100%'}
+          pressable
+          onPress={handleLeftBack ? handleLeftBack : goBack}>
           {componentLeft ? (
             componentLeft()
           ) : (
@@ -55,7 +61,6 @@ const NavBar = React.memo(
                     size={12}
                     tintColor={COLOR}
                     pressable
-                    onPress={handleLeftBack ? handleLeftBack : goBack}
                     margin={[0, 0, 0, 5]}
                   />
                   <Text
@@ -69,22 +74,25 @@ const NavBar = React.memo(
             </Box>
           )}
         </Box>
-        <Box
-          style={styles.widthCenter}
-          justify="center"
-          align="center"
-          height={'100%'}>
-          {componentCenter ? (
-            componentLeft()
-          ) : (
-            <Text
-              color={COLOR_TITLE}
-              style={styles.sizeTitle}
-              textAlign="center">
-              {title}
-            </Text>
-          )}
-        </Box>
+        {title ? (
+          <Box
+            style={styles.widthCenter}
+            justify="center"
+            align="center"
+            height={'100%'}>
+            {componentCenter ? (
+              componentLeft()
+            ) : (
+              <Text
+                color={COLOR_TITLE}
+                style={styles.sizeTitle}
+                textAlign="center">
+                {title}
+              </Text>
+            )}
+          </Box>
+        ) : null}
+
         <Box
           style={styles.widthHorizontal}
           flexDirection="row"

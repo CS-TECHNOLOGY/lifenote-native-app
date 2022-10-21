@@ -1,7 +1,7 @@
 import React from 'react';
 import isEqual from 'react-fast-compare';
 import { Controller } from 'react-hook-form';
-import { InputCustomize } from '../../components';
+import InputCustomize from '../InputCustomize';
 
 const InputItem = ({
   control,
