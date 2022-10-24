@@ -21,7 +21,7 @@ const HandleLogin = ({
         size={16}
         margin={[16, 0, 0, 0]}
         fontWeight={500}
-        color="#6A3EA1"
+        color={Colors.CS_PURPLE}
         style={styles.forgot}
         onPress={onForgotPassword}>
         Forgot Password
@@ -29,7 +29,7 @@ const HandleLogin = ({
       <ButtonCustomize
         margin={[40, 0, 0, 0]}
         label={'Login'}
-        background="#6A3EA1"
+        background={Colors.CS_PURPLE}
         styleLabel={styles.buttonLogin}
         tintColorRight="white"
         onPress={handleSubmit(onSubmit)}
@@ -62,7 +62,7 @@ const HandleLogin = ({
         size={16}
         fontWeight="500"
         textAlign="center"
-        color="#6A3EA1"
+        color={Colors.CS_PURPLE}
         onPress={onRegister}>
         Don’t have any account? Register here
       </Text>

@@ -14,7 +14,7 @@ const HandleRegister = ({ handleSubmit, onSubmit, onLoginGoogle }) => {
       <ButtonCustomize
         margin={[40, 0, 0, 0]}
         label={'Register'}
-        background="#6A3EA1"
+        background={Colors.CS_PURPLE}
         styleLabel={styles.buttonLogin}
         tintColorRight="white"
         onPress={handleSubmit(onSubmit)}

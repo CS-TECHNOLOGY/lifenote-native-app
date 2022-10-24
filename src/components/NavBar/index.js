@@ -12,6 +12,7 @@ const isEqual = require('react-fast-compare');
 
 const COLOR = Colors.CS_PURPLE;
 const COLOR_TITLE = Colors.CS_DARK_RED;
+const hitSlop = { top: 15, left: 15, bottom: 15, right: 15 };
 const NavBar = React.memo(
   ({
     componentRight,
@@ -49,7 +50,8 @@ const NavBar = React.memo(
           align="center"
           height={'100%'}
           pressable
-          onPress={handleLeftBack ? handleLeftBack : goBack}>
+          onPress={handleLeftBack ? handleLeftBack : goBack}
+          hitSlop={hitSlop}>
           {componentLeft ? (
             componentLeft()
           ) : (
@@ -62,6 +64,7 @@ const NavBar = React.memo(
                     tintColor={COLOR}
                     pressable
                     margin={[0, 0, 0, 5]}
+                    onPress={handleLeftBack ? handleLeftBack : goBack}
                   />
                   <Text
                     color={COLOR}
