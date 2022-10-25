@@ -145,7 +145,6 @@
 				5323DADFC5A98901EB8A25C2 /* Pods-LifeNote-LifeNoteTests.debug.xcconfig */,
 				D8BB5FAA9E8BD35D572AE421 /* Pods-LifeNote-LifeNoteTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

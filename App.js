@@ -14,6 +14,8 @@ const App = () => {
     scopes: ['https://www.googleapis.com/auth/userinfo.profile'], //scopes as you need
     webClientId:
       '577290104875-bsve3e8pgqluggvp0jot70muqbvup7ba.apps.googleusercontent.com',
+    iosClientId:
+      '577290104875-i4htrgl62ju6tuffci6rhi91sdjk7clf.apps.googleusercontent.com',
   });
   console.reportErrorsAsExceptions = false;
   return (
