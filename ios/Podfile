@@ -16,6 +16,7 @@ target 'LifeNote' do
     :hermes_enabled => false
   )
   
+  pod 'GoogleSignIn'
   target 'LifeNoteTests' do
     inherit! :complete
     # Pods for testing
