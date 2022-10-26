@@ -11,7 +11,7 @@ const FirstStack = createStackNavigator();
 const Router = () => {
   return (
     <FirstStack.Navigator
-      initialRouteName="IntroScreen"
+      initialRouteName="LoginScreen"
       screenOptions={{ headerShown: false }}>
       <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
       <FirstStack.Screen name="LoginScreen" component={LoginScreen} />

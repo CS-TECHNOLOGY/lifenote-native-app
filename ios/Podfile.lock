@@ -702,7 +702,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: b7a872907ee289ada902127f2554fa1d2c076122
   RNGoogleSignin: ec96ded826fcdca71ab5f58b1d086e969cabe67b
   RNPermissions: dcdb7b99796bbeda6975a6e79ad519c41b251b1c
-  RNReanimated: bd056d33bdf0dbbe4c424133aabda98cb9b304c2
+  RNReanimated: 8458b636707f6a17cc483bbb7d62b8be8aca2954
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
