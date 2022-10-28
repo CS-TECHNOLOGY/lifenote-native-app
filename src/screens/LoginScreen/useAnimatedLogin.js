@@ -14,6 +14,7 @@ import {
   GoogleSignin,
   statusCodes,
 } from '@react-native-google-signin/google-signin';
+import { useForm } from 'react-hook-form';
 
 export default function useAnimatedLogin() {
   const lottiePosition = useSharedValue(1);
@@ -21,6 +22,28 @@ export default function useAnimatedLogin() {
   const { height, width } = Dimensions.get('window');
   const [isRegistering, setIsRegistering] = useState(false);
   const navigation = useNavigation();
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm(
+    !isRegistering
+      ? {
+          defaultValues: {
+            firstName: '',
+            lastName: '',
+          },
+        }
+      : {
+          defaultValues: {
+            fullName: '',
+            email: '',
+            password: '',
+            rePassword: '',
+          },
+        },
+  );
 
   const imageAnimatedStyle = useAnimatedStyle(() => {
     const interpolation = interpolate(
@@ -65,10 +88,11 @@ export default function useAnimatedLogin() {
     }
   };
 
-  const onRegister = useCallback(
-    () => navigation.navigate('RegisterScreen'),
-    [navigation],
-  );
+  const onRegister = useCallback(() => {
+    if (!isRegistering) {
+      runOnJS(setIsRegistering)(true);
+    }
+  }, [isRegistering]);
   const onForgotPassword = useCallback(
     () => navigation.navigate('ForgotPasswordScreen'),
     [navigation],
@@ -92,6 +116,8 @@ export default function useAnimatedLogin() {
     }
   };
 
+  const onSubmit = useCallback(data => console.log(data), []);
+
   return {
     imageAnimatedStyle,
     buttonsAnimatedStyle,
@@ -105,5 +131,9 @@ export default function useAnimatedLogin() {
     onRegister,
     onForgotPassword,
     signIn,
+    control,
+    handleSubmit,
+    errors,
+    onSubmit,
   };
 }

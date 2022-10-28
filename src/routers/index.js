@@ -3,25 +3,30 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import IntroScreen from '../screens/IntroScreen/index';
 import LoginScreen from '../screens/LoginScreen';
-import RegisterScreen from '../screens/RegisterScreen';
 import ForgotPasswordScreen from '../screens/ForgotPassword';
+import { useAccountValue } from '../atoms/account';
 
 const FirstStack = createStackNavigator();
 
 const Router = () => {
+  const { isLogin } = useAccountValue();
+
   return (
-    <FirstStack.Navigator
-      initialRouteName="LoginScreen"
-      screenOptions={{ headerShown: false }}>
-      <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
-      <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
-      <FirstStack.Screen name="RegisterScreen" component={RegisterScreen} />
-      <FirstStack.Screen
-        name="ForgotPasswordScreen"
-        component={ForgotPasswordScreen}
-      />
+    <FirstStack.Navigator screenOptions={{ headerShown: false }}>
+      {isLogin === '' ? (
+        <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
+      ) : (
+        <>
+          <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
+          <FirstStack.Screen
+            name="ForgotPasswordScreen"
+            component={ForgotPasswordScreen}
+          />
+        </>
+      )}
     </FirstStack.Navigator>
   );
 };
+// };
 
 export default Router;

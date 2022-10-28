@@ -2,6 +2,7 @@ import React from 'react';
 import { InputItem, Text } from '../../components';
 import { isEqual } from 'react-fast-compare';
 import HandleRegister from './HandleRegister';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 const ContentRegister = ({
   control,
@@ -14,7 +15,11 @@ const ContentRegister = ({
 }) => {
   return (
     <>
-      <Text margin={[10, 0, 0, 0]} size={32} color={'#180E25'} fontWeight="700">
+      <Text
+        margin={[getStatusBarHeight() + 100, 0, 0, 0]}
+        size={32}
+        color={'#180E25'}
+        fontWeight="700">
         Register
       </Text>
       <Text margin={[15, 0, 0, 0]} size={15} color={'#827D89'} fontWeight="400">
