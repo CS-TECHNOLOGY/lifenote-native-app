@@ -1,25 +1,13 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { useForm } from 'react-hook-form';
 import styles from './styles';
 import ContentLogin from './ContentLogin';
 import useAnimatedLogin from './useAnimatedLogin';
 import Animated from 'react-native-reanimated';
 import IntroLogin from './IntroLogin';
+import ContentRegister from '../RegisterScreen/ContentRegister';
 
 const LoginScreen = () => {
-  const {
-    control,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    defaultValues: {
-      firstName: '',
-      lastName: '',
-    },
-  });
-  const onSubmit = useCallback(data => console.log(data), []);
-
   const {
     imageAnimatedStyle,
     buttonsAnimatedStyle,
@@ -32,6 +20,11 @@ const LoginScreen = () => {
     onRegister,
     onForgotPassword,
     signIn,
+    isRegistering,
+    control,
+    handleSubmit,
+    errors,
+    onSubmit,
   } = useAnimatedLogin();
 
   return (
@@ -52,15 +45,24 @@ const LoginScreen = () => {
           bounces={false}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.content}>
-          <ContentLogin
-            control={control}
-            onSubmit={onSubmit}
-            handleSubmit={handleSubmit}
-            errors={errors}
-            onRegister={onRegister}
-            onForgotPassword={onForgotPassword}
-            onLoginGoogle={signIn}
-          />
+          {!isRegistering ? (
+            <ContentLogin
+              control={control}
+              onSubmit={onSubmit}
+              handleSubmit={handleSubmit}
+              errors={errors}
+              onRegister={onRegister}
+              onForgotPassword={onForgotPassword}
+              onLoginGoogle={signIn}
+            />
+          ) : (
+            <ContentRegister
+              control={control}
+              onSubmit={onSubmit}
+              handleSubmit={handleSubmit}
+              errors={errors}
+            />
+          )}
         </KeyboardAwareScrollView>
       </Animated.View>
     </Animated.View>
