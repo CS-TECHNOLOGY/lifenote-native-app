@@ -17,6 +17,8 @@ target 'LifeNote' do
   )
   
   pod 'GoogleSignIn'
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
   target 'LifeNoteTests' do
     inherit! :complete
     # Pods for testing

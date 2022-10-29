@@ -5,6 +5,7 @@ import IntroScreen from '../screens/IntroScreen/index';
 import LoginScreen from '../screens/LoginScreen';
 import ForgotPasswordScreen from '../screens/ForgotPassword';
 import { useAccountValue } from '../atoms/account';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const FirstStack = createStackNavigator();
 
@@ -17,11 +18,12 @@ const Router = () => {
         <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
       ) : (
         <>
-          <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
+          <FirstStack.Screen name="ProfileScreen" component={ProfileScreen} />
+          {/* <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
           <FirstStack.Screen
             name="ForgotPasswordScreen"
             component={ForgotPasswordScreen}
-          />
+          /> */}
         </>
       )}
     </FirstStack.Navigator>
