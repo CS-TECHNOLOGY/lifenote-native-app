@@ -1,6 +1,6 @@
 import React from 'react';
 import Animated from 'react-native-reanimated';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Keyboard } from 'react-native';
 import { Box, Text } from '../../components';
 import AnimatedLottieView from 'lottie-react-native';
 import { Colors, Lottie } from '../../assets';
@@ -18,7 +18,12 @@ const IntroLogin = ({
   return (
     <>
       <Animated.View style={[StyleSheet.absoluteFill, imageAnimatedStyle]}>
-        <Box onPress={() => (lottiePosition.value = 1)} pressable>
+        <Box
+          onPress={() => {
+            lottiePosition.value = 1;
+            Keyboard.dismiss();
+          }}
+          pressable>
           <AnimatedLottieView
             style={{ width: width, height: height }}
             source={Lottie.TRAIN}

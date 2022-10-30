@@ -101,9 +101,7 @@ export default function useAnimatedLogin() {
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
-      console.log('userInfo', userInfo);
     } catch (error) {
-      console.log('_error', error);
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         // user cancelled the login flow
       } else if (error.code === statusCodes.IN_PROGRESS) {
@@ -116,7 +114,7 @@ export default function useAnimatedLogin() {
     }
   };
 
-  const onSubmit = useCallback(data => console.log(data), []);
+  const onSubmit = useCallback(data => null, []);
 
   return {
     imageAnimatedStyle,

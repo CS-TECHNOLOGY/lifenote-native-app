@@ -16,4 +16,5 @@ export default {
   CS_GRAY: '#9a9a9a',
   TRANSPARENT: 'transparent',
   CS_GREEN: '#d3d399',
+  CS_CHANGE_IMAGE: '#6A3EA1',
 };

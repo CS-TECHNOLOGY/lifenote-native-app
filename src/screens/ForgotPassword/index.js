@@ -16,7 +16,7 @@ const ForgotPasswordScreen = () => {
       email: '',
     },
   });
-  const onSubmit = useCallback(data => console.log(data), []);
+  const onSubmit = useCallback(data => null, []);
 
   return (
     <Box background={Colors.CS_GREEN} width="100%" height="100%" flex={1}>
