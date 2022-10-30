@@ -18,12 +18,12 @@ const Router = () => {
         <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
       ) : (
         <>
-          <FirstStack.Screen name="ProfileScreen" component={ProfileScreen} />
-          {/* <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
+          <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
           <FirstStack.Screen
             name="ForgotPasswordScreen"
             component={ForgotPasswordScreen}
-          /> */}
+          />
+          <FirstStack.Screen name="ProfileScreen" component={ProfileScreen} />
         </>
       )}
     </FirstStack.Navigator>

@@ -1,36 +1,31 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { Colors } from '../../assets';
 import { normalize } from '../../configs/commons';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
   avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    backgroundColor: '#7f8c8d',
-    marginTop: 24,
+    width: normalize(90),
+    height: normalize(90),
+    borderRadius: normalize(45),
+    backgroundColor: Colors.TRANSPARENT,
+    marginTop: normalize(24),
+    borderWidth: 1,
+    borderColor: Colors.CS_PURPLE,
   },
   btnChangeImageContainer: {
-    marginTop: 16,
+    marginTop: normalize(16),
     borderWidth: 1,
-    borderColor: '#6A3EA1',
-    height: 38,
-    width: 171,
-    borderRadius: 19,
+    borderColor: Colors.CS_PURPLE,
+    height: normalize(38),
+    width: normalize(170),
+    borderRadius: normalize(18),
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
   },
   content: {
-    backgroundColor: 'white',
     paddingBottom: getBottomSpace() + normalize(20),
     paddingHorizontal: normalize(15),
-    height: '100%',
     alignItems: 'center',
   },
 });
