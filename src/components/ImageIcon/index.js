@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import Box from '../Box';
-import images from '../../assets/images';
 import { normalize, normalizeOptions } from '../../configs/commons';
 
 const ImageIcon = ({
@@ -14,6 +13,7 @@ const ImageIcon = ({
   boxProps,
   onPress,
   disabled,
+  tintColor,
   ...rest
 }) => {
   const combinedStyle = ['size']
@@ -38,6 +38,7 @@ const ImageIcon = ({
             style,
           ])}
           {...rest}
+          tintColor={tintColor}
         />
       </Box>
     );
@@ -56,6 +57,7 @@ const ImageIcon = ({
         style,
       ])}
       {...rest}
+      tintColor={tintColor}
     />
   );
 };

@@ -114,7 +114,10 @@ export default function useAnimatedLogin() {
     }
   };
 
-  const onSubmit = useCallback(data => null, []);
+  const onSubmit = useCallback(
+    data => () => navigation.navigate('HomeScreen'),
+    [navigation],
+  );
 
   return {
     imageAnimatedStyle,
