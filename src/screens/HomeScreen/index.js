@@ -1,5 +1,11 @@
 import React, { useRef, useState } from 'react';
-import { Animated, SafeAreaView, StyleSheet, ScrollView } from 'react-native';
+import {
+  Animated,
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+} from 'react-native';
 import { Colors, Images } from '../../assets';
 import { Box, ImageIcon, Text } from '../../components';
 import TabButton from './TabButton';
@@ -126,7 +132,13 @@ export default function HomeScreen() {
           <Text size={30} fontWeight="700" padding={[30, 0, 0, 0]}>
             {currentTab}
           </Text>
-          {renderScreen(currentTab)}
+          <View pointerEvents={showMenu ? 'none' : 'auto'}>
+            <ScrollView
+              bounces={false}
+              contentContainerStyle={{ paddingBottom: normalize(100) }}>
+              {renderScreen(currentTab)}
+            </ScrollView>
+          </View>
         </Animated.View>
       </Animated.View>
     </SafeAreaView>
