@@ -12,7 +12,15 @@ const GlobalModal = forwardRef(({}, ref) => {
   const [isVisible, setIsVisible] = useState(false);
   const [messages, setMessages] = useState([]);
   useImperativeHandle(ref, () => ({
-    show: async ({ type, title, textLeft, textRight, closeAll, onDone }) => {
+    show: async ({
+      type,
+      title,
+      content,
+      textLeft,
+      textRight,
+      closeAll,
+      onDone,
+    }) => {
       setIsVisible(true);
       setMessages([
         {
@@ -23,6 +31,7 @@ const GlobalModal = forwardRef(({}, ref) => {
           textLeft,
           textRight,
           closeAll,
+          content,
         },
       ]);
     },
@@ -37,7 +46,15 @@ const GlobalModal = forwardRef(({}, ref) => {
   }, []);
 
   return messages?.map(
-    ({ type, onDone, title, textLeft, textRight, closeAll = false }) => (
+    ({
+      type,
+      onDone,
+      title,
+      content,
+      textLeft,
+      textRight,
+      closeAll = false,
+    }) => (
       <CustomModal
         key={item => item.global_modal}
         onClose={closeAll ? dismiss : null}
@@ -55,6 +72,7 @@ const GlobalModal = forwardRef(({}, ref) => {
           title: title,
           textLeft: textLeft,
           textRight: textRight,
+          content: content,
         })}
       </CustomModal>
     ),

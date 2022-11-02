@@ -1,3 +1,4 @@
+import React from 'react';
 import SuccessModal from './SuccessModal';
 import ErrorModal from './ErrorModal';
 import DefaultModal from './DefaultModal';
@@ -15,7 +16,7 @@ const contentModal = ({
     case 'success':
       // eslint-disable-next-line react/react-in-jsx-scope
       return <SuccessModal onPress={onClose} />;
-    case 'fail':
+    case 'error':
       // eslint-disable-next-line react/react-in-jsx-scope
       return <ErrorModal onPress={onClose} />;
     default:

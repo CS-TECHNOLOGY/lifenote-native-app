@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import { Colors } from '../../assets';
 import { normalize } from '../../configs/commons';
 const { width } = Dimensions.get('screen');
 
@@ -28,6 +29,10 @@ const styles = StyleSheet.create({
   modalContent: {
     flexGrow: 1,
     borderRadius: 4,
+  },
+  safeArea: {
+    height: normalize(200),
+    backgroundColor: Colors.CS_BACK_GROUND,
   },
 });
 

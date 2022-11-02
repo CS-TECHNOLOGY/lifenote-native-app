@@ -1,4 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
 import { Text } from '../../components';
 import { modalGlobalRef } from '../../routers/configRef';
 
@@ -11,6 +12,8 @@ const renderScreen = route => {
             modalGlobalRef.current?.show({
               type: '',
               onDone: () => null,
+              title: 'Show popup',
+              content: 'Very test app note life',
             })
           }>
           Screen Home

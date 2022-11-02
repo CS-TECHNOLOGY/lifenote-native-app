@@ -1,8 +1,8 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import Text from '../Text/index';
-import Box from '../Box/index';
 import { Colors } from '../../assets';
+import Box from '../Box';
+import Text from '../Text';
 import styles from './styles';
 
 const DefaultModal = ({
@@ -35,9 +35,9 @@ const DefaultModal = ({
           style={styles.radius}>
           <Text color={Colors.CS_TEXT_DISABLE}>{textLeft}</Text>
         </Box>
-        <TouchableOpacity
-          onPress={onPress}
+        <Box
           pressable
+          onPress={onPress}
           width="40%"
           height={'100%'}
           background={Colors.CS_PURPLE}
@@ -45,7 +45,7 @@ const DefaultModal = ({
           align="center"
           style={styles.radius}>
           <Text color={Colors.CS_WHITE}>{textRight}</Text>
-        </TouchableOpacity>
+        </Box>
       </Box>
     </>
   );

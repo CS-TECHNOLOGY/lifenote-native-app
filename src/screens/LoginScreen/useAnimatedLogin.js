@@ -115,7 +115,7 @@ export default function useAnimatedLogin() {
   };
 
   const onSubmit = useCallback(
-    data => () => navigation.navigate('HomeScreen'),
+    data => navigation.navigate('HomeScreen'),
     [navigation],
   );
 
