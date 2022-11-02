@@ -10,6 +10,7 @@ import ButtonCustomize from './ButtonCustomize';
 import NavBar from './NavBar';
 import InputCustomize from './InputCustomize';
 import InputItem from './InputItem';
+import ModalGlobal from './ModalGlobal';
 
 export {
   Box,
@@ -24,6 +25,7 @@ export {
   NavBar,
   InputCustomize,
   InputItem,
+  ModalGlobal,
 };
 
 export default {
@@ -39,4 +41,5 @@ export default {
   NavBar,
   InputCustomize,
   InputItem,
+  ModalGlobal,
 };

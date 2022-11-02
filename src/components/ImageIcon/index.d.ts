@@ -20,6 +20,7 @@ interface BoxProps extends ViewProps {
   height?: string | number;
   margin?: number | [number, number] | [number, number, number, number];
   padding?: number | [number, number] | [number, number, number, number];
+  tintColor?: string;
 }
 
 interface ImageIconProps extends ImageProps {
@@ -29,6 +30,7 @@ interface ImageIconProps extends ImageProps {
   padding?: number | [number, number] | [number, number, number, number];
   pressable?: boolean;
   name: 'GOOGLE' | 'ARROW_RIGHT' | 'GO_BACK';
+  tintColor: 'white';
 }
 
 export default function ImageIcon(props: ImageIconProps): {};
