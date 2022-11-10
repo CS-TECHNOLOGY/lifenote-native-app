@@ -11,7 +11,6 @@ import { Box, ImageIcon, Text } from '../../components';
 import TabButton from './TabButton';
 import renderScreen from './renderScreen';
 import { normalize } from '../../configs/commons';
-import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen() {
   const [currentTab, setCurrentTab] = useState('Home');
@@ -20,27 +19,36 @@ export default function HomeScreen() {
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
   const newRadius = showMenu ? normalize(15) : 0;
-  const navigation = useNavigation();
   const drawers = [
     {
       title: 'Home',
       key: 'home_key',
-      image: Images.SUCCESS,
+      image: Images.ATTACH_EMAIL,
     },
     {
       title: 'Profile',
       key: 'profile_key',
-      image: Images.ERROR,
+      image: Images.ACCOUNT_CIRCLE,
+    },
+    {
+      title: 'Security',
+      key: 'security_key',
+      image: Images.SECURITY,
     },
     {
       title: 'Noted',
       key: 'noted_key',
-      image: Images.ERROR,
+      image: Images.TEXT_SNIPPET,
+    },
+    {
+      title: 'Notification',
+      key: 'notification_key',
+      image: Images.NOTIFICATIONS_ACTIVE,
     },
     {
       title: 'LogOut',
       key: 'logout_key',
-      image: Images.SUCCESS,
+      image: Images.LOGOUT,
     },
   ];
   const openClose = () => {
@@ -57,31 +65,34 @@ export default function HomeScreen() {
     }).start();
 
     Animated.timing(closeButtonOffset, {
-      toValue: !showMenu ? -30 : 0,
+      toValue: !showMenu ? -25 : -25,
       duration: 300,
       useNativeDriver: true,
     }).start();
 
-    setShowMenu(!showMenu);
+    if (showMenu) {
+      setShowMenu(false);
+    } else {
+      setShowMenu(true);
+    }
   };
-  const viewProfile = () => {
-    navigation.navigate('ProfileScreen');
-  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Box justify="flex-start" padding={[15]}>
-        <ImageIcon name={Images.GOOGLE} size={60} margin={[10, 0, 0, 0]} />
-
+        <ImageIcon
+          name={Images.ACCOUNT_CIRCLE}
+          size={60}
+          margin={[10, 0, 0, 0]}
+        />
         <Text
           size={20}
           fontWeight="700"
           color={Colors.CS_WHITE}
-          margin={[20, 0, 0, 0]}>
-          Noted name
+          margin={[20, 0, 0, 0]}
+          numberOfLines={1}>
+          Đặng Quyết Huynh
         </Text>
-        <Box pressable margin={[6, 0]} onPress={viewProfile}>
-          <Text color={Colors.CS_WHITE}>View Profile</Text>
-        </Box>
         <ScrollView style={styles.scroll}>
           {drawers.slice(0, drawers.length - 1).map(item => (
             <TabButton
@@ -90,6 +101,7 @@ export default function HomeScreen() {
               setCurrentTab={setCurrentTab}
               title={item.title}
               key={item.key.toString()}
+              closeMenu={openClose}
             />
           ))}
         </ScrollView>
@@ -148,7 +160,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'purple',
+    backgroundColor: Colors.CS_DARK,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
   },
