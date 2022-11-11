@@ -2,6 +2,7 @@
 import React from 'react';
 import { Text } from '../../components';
 import { modalGlobalRef } from '../../routers/configRef';
+import SecurityScreen from '../SecurityScreen';
 
 const renderScreen = route => {
   switch (route) {
@@ -19,6 +20,8 @@ const renderScreen = route => {
           Screen Home
         </Text>
       );
+    case 'Pattern':
+      return <SecurityScreen />;
 
     default:
       return (

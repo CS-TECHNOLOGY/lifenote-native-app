@@ -11,6 +11,7 @@ import NavBar from './NavBar';
 import InputCustomize from './InputCustomize';
 import InputItem from './InputItem';
 import ModalGlobal from './ModalGlobal';
+import PatternLock from './PatternLock';
 
 export {
   Box,
@@ -26,6 +27,7 @@ export {
   InputCustomize,
   InputItem,
   ModalGlobal,
+  PatternLock,
 };
 
 export default {
@@ -42,4 +44,5 @@ export default {
   InputCustomize,
   InputItem,
   ModalGlobal,
+  PatternLock,
 };

@@ -21,4 +21,5 @@ export default {
   ACCOUNT_CIRCLE: require('./account_circle.png'),
   DRAWER_MENU: require('./reorder.png'),
   LOGOUT: require('./logout.png'),
+  PATTERN: require('./pattern.png'),
 };

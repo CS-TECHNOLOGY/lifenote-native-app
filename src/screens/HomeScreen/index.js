@@ -31,9 +31,9 @@ export default function HomeScreen() {
       image: Images.ACCOUNT_CIRCLE,
     },
     {
-      title: 'Security',
-      key: 'security_key',
-      image: Images.SECURITY,
+      title: 'Pattern',
+      key: 'pattern_key',
+      image: Images.PATTERN,
     },
     {
       title: 'Noted',
@@ -145,11 +145,12 @@ export default function HomeScreen() {
             {currentTab}
           </Text>
           <View pointerEvents={showMenu ? 'none' : 'auto'}>
-            <ScrollView
+            {/* <ScrollView
               bounces={false}
               contentContainerStyle={{ paddingBottom: normalize(100) }}>
               {renderScreen(currentTab)}
-            </ScrollView>
+            </ScrollView> */}
+            {renderScreen(currentTab)}
           </View>
         </Animated.View>
       </Animated.View>

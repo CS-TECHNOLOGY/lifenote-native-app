@@ -4,25 +4,22 @@ import {
   useRecoilValue,
   useSetRecoilState,
 } from 'recoil';
-import { NULL } from '../../configs/constants';
 import { persistAtom } from '../atomPersist';
 
 export const activeRouteState = atom({
-  key: 'ACCOUNT',
-  default: {
-    isLogin: NULL,
-  },
-  effects_UNSTABLE: [persistAtom('isLogin')],
+  key: 'PATTERN_LOCK',
+  default: { patternLock: '' },
+  effects_UNSTABLE: [persistAtom('patternLock')],
 });
 
-export const useAccountState = () => {
+export const usePatternState = () => {
   return useRecoilState(activeRouteState);
 };
 
-export const useAccountValue = () => {
+export const usePatternValue = () => {
   return useRecoilValue(activeRouteState);
 };
 
-export const useSetAccountState = () => {
+export const useSetPatternState = () => {
   return useSetRecoilState(activeRouteState);
 };
