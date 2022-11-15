@@ -1,48 +1,22 @@
 import React, { useRef, useState } from 'react';
-import {
-  Animated,
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-} from 'react-native';
+import { Animated, SafeAreaView, StyleSheet, ScrollView } from 'react-native';
 import { Colors, Images } from '../../assets';
-import { Box, ImageIcon, Text } from '../../components';
+import { Box, ImageIcon, NavBar, Text } from '../../components';
 import TabButton from './TabButton';
 import renderScreen from './renderScreen';
 import { normalize } from '../../configs/commons';
 import { useNavigation } from '@react-navigation/native';
+import drawers from './data';
 
 export default function HomeScreen() {
-  const [currentTab, setCurrentTab] = useState('Home');
+  const [currentTab, setCurrentTab] = useState('MenuNotes');
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
   const newRadius = showMenu ? normalize(15) : 0;
   const navigation = useNavigation();
-  const drawers = [
-    {
-      title: 'Home',
-      key: 'home_key',
-      image: Images.SUCCESS,
-    },
-    {
-      title: 'Profile',
-      key: 'profile_key',
-      image: Images.ERROR,
-    },
-    {
-      title: 'Noted',
-      key: 'noted_key',
-      image: Images.ERROR,
-    },
-    {
-      title: 'LogOut',
-      key: 'logout_key',
-      image: Images.SUCCESS,
-    },
-  ];
+
   const openClose = () => {
     Animated.timing(scaleValue, {
       toValue: showMenu ? 1 : 0.88,
@@ -113,32 +87,37 @@ export default function HomeScreen() {
             transform: [{ scale: scaleValue }, { translateX: offsetValue }],
           },
         ]}>
+        <NavBar
+          title={currentTab}
+          COLOR_TITLE={Colors.CS_PURPLE}
+          handleLeftBack={openClose}
+          componentLeft={() => (
+            <Box width={'100%'} height={'100%'} justify="center">
+              <ImageIcon
+                source={!showMenu ? Images.MENU : Images.ARROW_RIGHT}
+                size={27}
+                tintColor={Colors.CS_PURPLE}
+              />
+            </Box>
+          )}
+        />
         <Animated.View
-          style={{
-            transform: [
-              {
-                translateY: closeButtonOffset,
-              },
-            ],
-          }}>
-          <Box pressable onPress={openClose}>
-            <ImageIcon
-              source={showMenu ? Images.ARROW_RIGHT : Images.GO_BACK}
-              size={20}
-              tintColor={Colors.CS_BLACK}
-              margin={[40, 0, 0, 0]}
-            />
-          </Box>
-          <Text size={30} fontWeight="700" padding={[30, 0, 0, 0]}>
-            {currentTab}
-          </Text>
-          <View pointerEvents={showMenu ? 'none' : 'auto'}>
-            <ScrollView
-              bounces={false}
-              contentContainerStyle={{ paddingBottom: normalize(100) }}>
-              {renderScreen(currentTab)}
-            </ScrollView>
-          </View>
+          style={[
+            {
+              transform: [
+                {
+                  translateY: closeButtonOffset,
+                },
+              ],
+            },
+            styles.viewContent,
+          ]}>
+          <ScrollView
+            pointerEvents={showMenu ? 'none' : 'auto'}
+            bounces={false}
+            style={styles.contentContainer}>
+            {renderScreen(currentTab)}
+          </ScrollView>
         </Animated.View>
       </Animated.View>
     </SafeAreaView>
@@ -160,11 +139,16 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    paddingHorizontal: normalize(15),
-    paddingVertical: normalize(20),
   },
   scroll: {
     flexGrow: 1,
     marginTop: normalize(50),
+  },
+  viewContent: {
+    marginTop: normalize(30),
+    paddingBottom: normalize(30),
+  },
+  contentContainer: {
+    paddingBottom: normalize(30),
   },
 });
