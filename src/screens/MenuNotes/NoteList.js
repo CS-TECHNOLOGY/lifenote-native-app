@@ -1,87 +1,77 @@
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
+import { Colors } from '../../assets';
+import { Box, Text } from '../../components';
 
 const RenderNote = ({ text }) => (
-  <View
-    style={{
-      marginTop: 5,
-      flexDirection: 'row',
-      alignItems: 'center',
-    }}>
-    <View
-      style={{
-        width: 5,
-        height: 5,
-        backgroundColor: 'black',
-        borderRadius: 2.5,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}></View>
+  <Box margin={[5, 0, 0, 0]} flexDirection="row" align="center">
+    <Box
+      background={Colors.CS_BLACK}
+      justify="center"
+      align="center"
+      style={styles.dot}
+    />
     <Text
       numberOfLines={1}
-      style={{
-        color: '#444',
-        fontSize: 14,
-        textAlign: 'left',
-        fontWeight: '700',
-        paddingHorizontal: 5,
-      }}>
+      color={Colors.CS_GRAY}
+      size={14}
+      textAlign="left"
+      fontWeight={'700'}
+      padding={[0, 5]}>
       {text}palsy sport Cerebral palsy sport Cerebral palsy sport Cerebral palsy
       sport Cerebral palsy sport Cerebral palsy sport Cerebral palsy sport
       Cerebral palsy sport Cerebral palsy sport Cerebral palsy sport Cerebral
       palsy sport Cerebral palsy sport
     </Text>
-  </View>
+  </Box>
 );
 const NoteList = ({ item, style }) => {
   return (
-    <View
-      style={[
-        {
-          // margin: 5,
-          backgroundColor: 'white',
-          borderRadius: 5,
-          overflow: 'hidden',
-          borderWidth: 1,
-          borderColor: '#dedede',
-          // height: 60,
-          marginTop: 10,
-          padding: 10,
-        },
-        style,
-      ]}>
-      <Text
-        style={{
-          color: '#444',
-          fontSize: 16,
-          textAlign: 'left',
-          fontWeight: '900',
-        }}>
+    <Box
+      background={Colors.CS_WHITE_MODE}
+      padding={[10]}
+      margin={[10, 0, 0, 0]}
+      style={[styles.container, style]}>
+      <Text color={Colors.CS_GRAY} size={16} fontWeight="900">
         Cerebral
       </Text>
       <Image
         source={{ uri: item.image }}
-        style={{ width: '100%', height: 40, marginVertical: 5 }}
+        style={styles.image}
         resizeMode="cover"
       />
-      <Text numberOfLines={3} style={{ marginTop: 5 }}>
+      <Text numberOfLines={3} margin={[5, 0, 0, 0]}>
         <RenderNote text={item.text} />
         <RenderNote text={item.text} />
         <RenderNote text={item.text} />
         <RenderNote text={item.text} />
       </Text>
       <Text
-        style={{
-          fontSize: 8,
-          color: 'gray',
-          textAlign: 'right',
-
-          marginTop: 5,
-        }}>
+        color={Colors.gray}
+        textAlign="right"
+        size={8}
+        margin={[5, 0, 0, 0]}>
         12/01/2022
       </Text>
-    </View>
+    </Box>
   );
 };
-
+const styles = StyleSheet.create({
+  dot: {
+    width: 5,
+    height: 5,
+    borderRadius: 2.5,
+  },
+  container: {
+    borderRadius: 5,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: Colors.CS_DISABLE,
+  },
+  image: {
+    width: '100%',
+    height: 40,
+    marginVertical: 5,
+  },
+});
 export default NoteList;

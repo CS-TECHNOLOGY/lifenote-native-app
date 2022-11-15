@@ -1,100 +1,87 @@
 import React from 'react';
-import { Text, TouchableNativeFeedback, View } from 'react-native';
-import { Images } from '../../assets';
-import { ImageIcon } from '../../components';
+import { StyleSheet, TouchableNativeFeedback, View } from 'react-native';
+import { Colors, Images } from '../../assets';
+import { Box, ImageIcon, Text } from '../../components';
 const RenderCheckBox = ({ text }) => (
-  <View
-    style={{
-      marginTop: 5,
-      flexDirection: 'row',
-      alignItems: 'center',
-    }}>
-    <View
-      style={{
-        width: 12,
-        height: 12,
-        backgroundColor: 'transparent',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderWidth: 1,
-      }}></View>
+  <Box margin={[5, 0, 0, 0]} flexDirection="row" align="center">
+    <Box
+      background={Colors.TRANSPARENT}
+      justify="center"
+      align="center"
+      style={styles.checkBox}
+    />
     <Text
+      color={Colors.CS_GRAY}
       numberOfLines={1}
-      style={{
-        color: '#444',
-        fontSize: 14,
-        textAlign: 'left',
-        fontWeight: '700',
-        paddingHorizontal: 5,
-      }}>
+      size={14}
+      textAlign="left"
+      fontWeight={'700'}
+      padding={[0, 5]}>
       {text}palsy sport Cerebral palsy sport Cerebral palsy sport Cerebral palsy
       sport Cerebral palsy sport Cerebral palsy sport Cerebral palsy sport
       Cerebral palsy sport Cerebral palsy sport Cerebral palsy sport Cerebral
       palsy sport Cerebral palsy sport
     </Text>
-  </View>
+  </Box>
 );
 const NoteCheckBox = ({ style, item }) => {
   return (
-    <View
-      style={[
-        {
-          // margin: 5,
-          backgroundColor: 'white',
-          borderRadius: 5,
-          overflow: 'hidden',
-          borderWidth: 1,
-          borderColor: '#dedede',
-          // height: 60,
-          marginTop: 10,
-        },
-        style,
-      ]}>
-      <View
-        style={{
-          padding: 10,
-          opacity: 0.5,
-        }}>
+    <Box
+      background={Colors.CS_WHITE_MODE}
+      margin={[10, 0, 0, 0]}
+      style={[styles.container, style]}>
+      <Box padding={[10]} style={styles.opacity}>
         <Text
-          style={{
-            color: '#444',
-            fontSize: 16,
-            textAlign: 'left',
-            fontWeight: '900',
-          }}>
+          color={Colors.CS_GRAY}
+          size={16}
+          textAlign="left"
+          fontWeight={'900'}>
           Cerebral
         </Text>
-        <Text numberOfLines={3} style={{ marginTop: 5 }}>
+        <Text numberOfLines={3} margin={[5, 0, 0, 0]}>
           <RenderCheckBox text={item.text} />
           <RenderCheckBox text={item.text} />
           <RenderCheckBox text={item.text} />
           <RenderCheckBox text={item.text} />
         </Text>
         <Text
-          style={{
-            fontSize: 8,
-            color: 'gray',
-            textAlign: 'right',
-
-            marginTop: 5,
-          }}>
+          color={Colors.CS_GRAY}
+          size={8}
+          textAlign="right"
+          margin={[5, 0, 0, 0]}>
           12/01/2022
         </Text>
-      </View>
+      </Box>
       <TouchableNativeFeedback onPress={() => null}>
-        <View
-          style={{
-            position: 'absolute',
-            justifyContent: 'center',
-            alignItems: 'center',
-            width: '100%',
-            height: '100%',
-          }}>
-          <ImageIcon size={30} source={Images.GOOGLE} />
-        </View>
+        <Box
+          justify="center"
+          align="center"
+          width={'100%'}
+          height={'100%'}
+          style={styles.lock}>
+          <ImageIcon size={30} source={Images.PASSWORD} />
+        </Box>
       </TouchableNativeFeedback>
-    </View>
+    </Box>
   );
 };
-
+const styles = StyleSheet.create({
+  checkBox: {
+    borderWidth: 1,
+    width: 12,
+    height: 12,
+  },
+  container: {
+    borderRadius: 5,
+    overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: Colors.CS_DISABLE,
+  },
+  opacity: {
+    opacity: 0.5,
+  },
+  lock: {
+    position: 'absolute',
+  },
+});
 export default NoteCheckBox;
