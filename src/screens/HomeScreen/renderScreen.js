@@ -6,7 +6,7 @@ import MenuNotes from '../MenuNotes';
 
 const renderScreen = route => {
   switch (route) {
-    case 'MenuNotes':
+    case 'Menu':
       return <MenuNotes />;
 
     default:

@@ -5,17 +5,15 @@ import { Box, ImageIcon, NavBar, Text } from '../../components';
 import TabButton from './TabButton';
 import renderScreen from './renderScreen';
 import { normalize } from '../../configs/commons';
-import { useNavigation } from '@react-navigation/native';
 import drawers from './data';
 
 export default function HomeScreen() {
-  const [currentTab, setCurrentTab] = useState('MenuNotes');
+  const [currentTab, setCurrentTab] = useState('Menu');
   const [showMenu, setShowMenu] = useState(false);
   const offsetValue = useRef(new Animated.Value(0)).current;
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
   const newRadius = showMenu ? normalize(15) : 0;
-  const navigation = useNavigation();
 
   const openClose = () => {
     Animated.timing(scaleValue, {
@@ -31,31 +29,34 @@ export default function HomeScreen() {
     }).start();
 
     Animated.timing(closeButtonOffset, {
-      toValue: !showMenu ? -30 : 0,
+      toValue: !showMenu ? -25 : -25,
       duration: 300,
       useNativeDriver: true,
     }).start();
 
-    setShowMenu(!showMenu);
+    if (showMenu) {
+      setShowMenu(false);
+    } else {
+      setShowMenu(true);
+    }
   };
-  const viewProfile = () => {
-    navigation.navigate('ProfileScreen');
-  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Box justify="flex-start" padding={[15]}>
-        <ImageIcon name={Images.GOOGLE} size={60} margin={[10, 0, 0, 0]} />
-
+        <ImageIcon
+          name={Images.ACCOUNT_CIRCLE}
+          size={60}
+          margin={[10, 0, 0, 0]}
+        />
         <Text
           size={20}
           fontWeight="700"
           color={Colors.CS_WHITE}
-          margin={[20, 0, 0, 0]}>
-          Noted name
+          margin={[20, 0, 0, 0]}
+          numberOfLines={1}>
+          Đặng Quyết Huynh
         </Text>
-        <Box pressable margin={[6, 0]} onPress={viewProfile}>
-          <Text color={Colors.CS_WHITE}>View Profile</Text>
-        </Box>
         <ScrollView style={styles.scroll}>
           {drawers.slice(0, drawers.length - 1).map(item => (
             <TabButton
@@ -64,6 +65,7 @@ export default function HomeScreen() {
               setCurrentTab={setCurrentTab}
               title={item.title}
               key={item.key.toString()}
+              closeMenu={openClose}
             />
           ))}
         </ScrollView>
@@ -127,7 +129,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'purple',
+    backgroundColor: Colors.CS_DARK,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
   },
