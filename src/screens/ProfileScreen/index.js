@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Colors, Images } from '../../assets';
-import { Box, ImageIcon, NavBar } from '../../components';
+import { Box, ButtonCustomize, ImageIcon, NavBar } from '../../components';
 import HandleChangeImage from './HandleChangeImage';
 import styles from './styles';
 
@@ -33,6 +33,15 @@ const ProfileScreen = () => {
           changeAvatar={() => null}
         />
       </KeyboardAwareScrollView>
+      <Box padding={[0, 15]} style={styles.saveButton}>
+        <ButtonCustomize
+          label={'Save Chane'}
+          background={Colors.CS_PURPLE}
+          styleLabel={{ color: Colors.CS_WHITE }}
+          onPress={() => null}
+          rightItem={null}
+        />
+      </Box>
     </Box>
   );
 };

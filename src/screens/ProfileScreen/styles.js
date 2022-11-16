@@ -28,5 +28,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: normalize(15),
     alignItems: 'center',
   },
+  saveButton: {
+    position: 'absolute',
+    bottom: normalize(20) + getBottomSpace(),
+  },
 });
 export default styles;
