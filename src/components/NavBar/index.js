@@ -11,7 +11,7 @@ import { getDefaultHeaderHeight } from '../../configs/commons';
 const isEqual = require('react-fast-compare');
 
 const COLOR = Colors.CS_PURPLE;
-const COLOR_TITLE = Colors.CS_DARK_RED;
+const COLOR_TITLE_DEFAULT = Colors.CS_DARK_RED;
 const hitSlop = { top: 15, left: 15, bottom: 15, right: 15 };
 const NavBar = React.memo(
   ({
@@ -24,6 +24,7 @@ const NavBar = React.memo(
     leftIcon = true,
     label = 'Back',
     border = true,
+    COLOR_TITLE = COLOR_TITLE_DEFAULT,
   }) => {
     const navigation = useNavigation();
     const goBack = () => {

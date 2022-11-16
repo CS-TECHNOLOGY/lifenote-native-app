@@ -1,6 +1,6 @@
 export default {
   CS_RED: '#D93744',
-  CS_DARK_RED: '#FF8E3A',
+  CS_DARK_RED: '#D9614C',
   CS_PURPLE: '#800080',
   CS_PINK: '#bc8f8f',
   CS_BLUE: '#6062AC',
@@ -11,10 +11,14 @@ export default {
   CS_OLIVE: '#808000',
   CS_ERROR: '#dc143c',
   CS_SKY_BLUE: '#00bfff',
-  CS_BACK_GROUND: '#fff5ee',
+  CS_BACK_GROUND: '#F8EEE2',
   CS_BLACK: '#000000',
   CS_GRAY: '#9a9a9a',
   TRANSPARENT: 'transparent',
   CS_GREEN: '#d3d399',
   CS_CHANGE_IMAGE: '#6A3EA1',
+  CS_DISABLE: '#D0DEEB',
+  CS_TEXT_DISABLE: '#9BA9B9',
+  CS_DARK: '#000022',
+  CS_WHITE_MODE: '#ffffff',
 };
