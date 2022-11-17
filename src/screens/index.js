@@ -4,6 +4,7 @@ import ForgotPasswordScreen from './ForgotPassword/index';
 import ProfileScreen from './ProfileScreen/index';
 import HomeScreen from './HomeScreen/index';
 import SecurityScreen from './SecurityScreen/index';
+import MenuNotes from './MenuNotes/index';
 export default {
   IntroScreen,
   LoginScreen,
@@ -11,4 +12,5 @@ export default {
   ProfileScreen,
   HomeScreen,
   SecurityScreen,
+  MenuNotes,
 };

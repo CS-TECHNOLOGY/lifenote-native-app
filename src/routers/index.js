@@ -15,7 +15,8 @@ const Router = () => {
 
   return (
     <FirstStack.Navigator screenOptions={{ headerShown: false }}>
-      {isLogin === '' ? (
+      <FirstStack.Screen name="HomeScreen" component={HomeScreen} />
+      {/* {isLogin === '' ? (
         <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
       ) : (
         <>
@@ -27,7 +28,7 @@ const Router = () => {
           />
           <FirstStack.Screen name="ProfileScreen" component={ProfileScreen} />
         </>
-      )}
+      )} */}
     </FirstStack.Navigator>
   );
 };

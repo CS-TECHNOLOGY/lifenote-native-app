@@ -20,4 +20,5 @@ export default {
   CS_DISABLE: '#D0DEEB',
   CS_TEXT_DISABLE: '#9BA9B9',
   CS_DARK: '#000022',
+  CS_WHITE_MODE: '#ffffff',
 };

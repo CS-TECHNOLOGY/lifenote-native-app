@@ -4,6 +4,7 @@ export default {
   GO_BACK: require('./cheveron_left.png'),
   ERROR: require('./error.png'),
   SUCCESS: require('./success.png'),
+  MENU: require('./menu.png'),
   INFO: require('./info.png'),
   KEYBOARD_BACKSPACE: require('./keyboard_backspace.png'),
   MANAGE_SEARCH: require('./manage_search.png'),
