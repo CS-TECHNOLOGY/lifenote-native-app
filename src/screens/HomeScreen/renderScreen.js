@@ -20,7 +20,7 @@ const renderScreen = route => {
     default:
       return (
         <Text
-          nPress={() =>
+          onPress={() =>
             modalGlobalRef.current?.show({
               type: 'success',
             })

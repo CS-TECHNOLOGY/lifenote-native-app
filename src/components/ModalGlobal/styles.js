@@ -5,7 +5,7 @@ const { width } = Dimensions.get('screen');
 
 const styles = StyleSheet.create({
   radius: {
-    borderRadius: normalize(4),
+    borderRadius: normalize(20),
   },
   containerTwo: {
     margin: 0,
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     padding: normalize(10),
     justifyContent: 'space-between',
     flexDirection: 'column',
+    paddingHorizontal: normalize(20),
   },
   modalContent: {
     flexGrow: 1,

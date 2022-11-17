@@ -3,6 +3,7 @@ import { Colors } from '../../assets';
 import { Box, ImageIcon, Text } from '../../components';
 import { normalize } from '../../configs/commons';
 import { StyleSheet } from 'react-native';
+import { modalGlobalRef } from '../../routers/configRef';
 
 const TabButton = ({ currentTab, setCurrentTab, title, image, closeMenu }) => {
   return (
@@ -10,6 +11,11 @@ const TabButton = ({ currentTab, setCurrentTab, title, image, closeMenu }) => {
       pressable
       onPress={() => {
         if (title === 'LogOut') {
+          modalGlobalRef.current?.show({
+            type: '',
+            title: 'Do you want logout ?',
+            content: 'After logout your data will be saved on the server',
+          });
         } else {
           setCurrentTab && setCurrentTab(title);
           closeMenu && closeMenu(true);

@@ -27,7 +27,7 @@ const DefaultModal = ({
         <Box
           pressable
           onPress={onClose}
-          width="40%"
+          width="45%"
           height={'100%'}
           background={Colors.CS_DISABLE}
           justify="center"
@@ -38,7 +38,7 @@ const DefaultModal = ({
         <Box
           pressable
           onPress={onPress}
-          width="40%"
+          width="45%"
           height={'100%'}
           background={Colors.CS_PURPLE}
           justify="center"
