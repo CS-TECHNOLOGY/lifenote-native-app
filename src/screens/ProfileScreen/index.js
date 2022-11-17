@@ -18,8 +18,7 @@ const ProfileScreen = () => {
     },
   });
   return (
-    <Box width="100%" height="100%" background={Colors.CS_BACK_GROUND}>
-      <NavBar leftIcon label="Settings" border={true} />
+    <Box width="100%" height="100%" background={Colors.TRANSPARENT}>
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         enableOnAndroid={true}

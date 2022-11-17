@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3D6E11CEA819A7FF098F9457 /* libPods-LifeNote-LifeNoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 965FC76D97A03712ECCC58AB /* libPods-LifeNote-LifeNoteTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9DFE9AD24D5B979981542C1F /* libPods-LifeNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD994C9E1E8D7CAD5EC83B3C /* libPods-LifeNote.a */; };
+		A7742DDCA28AF1BAFF6E73C6 /* libPods-LifeNote-LifeNoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 600517B67B8ADAB5DADCE0B7 /* libPods-LifeNote-LifeNoteTests.a */; };
+		CEC929F0BF5BC5EA4CFEDEEA /* libPods-LifeNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE757F4E334F61C89BEA1582 /* libPods-LifeNote.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +30,19 @@
 		00E356EE1AD99517003FC87E /* LifeNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* LifeNoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeNoteTests.m; sourceTree = "<group>"; };
-		0869280A70146D310FB597CC /* Pods-LifeNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote.debug.xcconfig"; path = "Target Support Files/Pods-LifeNote/Pods-LifeNote.debug.xcconfig"; sourceTree = "<group>"; };
+		0EDE49700B0F09470F047596 /* Pods-LifeNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote.release.xcconfig"; path = "Target Support Files/Pods-LifeNote/Pods-LifeNote.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* LifeNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LifeNote/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LifeNote/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LifeNote/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LifeNote/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LifeNote/main.m; sourceTree = "<group>"; };
-		5323DADFC5A98901EB8A25C2 /* Pods-LifeNote-LifeNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote-LifeNoteTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
-		55F132A90F6F4711D04F810E /* Pods-LifeNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote.release.xcconfig"; path = "Target Support Files/Pods-LifeNote/Pods-LifeNote.release.xcconfig"; sourceTree = "<group>"; };
+		1EFD36C5B4127B1B91823CB9 /* Pods-LifeNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote.debug.xcconfig"; path = "Target Support Files/Pods-LifeNote/Pods-LifeNote.debug.xcconfig"; sourceTree = "<group>"; };
+		5A1E20807904786DB0D75B54 /* Pods-LifeNote-LifeNoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote-LifeNoteTests.debug.xcconfig"; path = "Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		600517B67B8ADAB5DADCE0B7 /* libPods-LifeNote-LifeNoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifeNote-LifeNoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LifeNote/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		965FC76D97A03712ECCC58AB /* libPods-LifeNote-LifeNoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifeNote-LifeNoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8BB5FAA9E8BD35D572AE421 /* Pods-LifeNote-LifeNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote-LifeNoteTests.release.xcconfig"; path = "Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests.release.xcconfig"; sourceTree = "<group>"; };
-		DD994C9E1E8D7CAD5EC83B3C /* libPods-LifeNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifeNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE757F4E334F61C89BEA1582 /* libPods-LifeNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LifeNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF445BC07AA3D01565B968AD /* Pods-LifeNote-LifeNoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LifeNote-LifeNoteTests.release.xcconfig"; path = "Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D6E11CEA819A7FF098F9457 /* libPods-LifeNote-LifeNoteTests.a in Frameworks */,
+				A7742DDCA28AF1BAFF6E73C6 /* libPods-LifeNote-LifeNoteTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DFE9AD24D5B979981542C1F /* libPods-LifeNote.a in Frameworks */,
+				CEC929F0BF5BC5EA4CFEDEEA /* libPods-LifeNote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				DD994C9E1E8D7CAD5EC83B3C /* libPods-LifeNote.a */,
-				965FC76D97A03712ECCC58AB /* libPods-LifeNote-LifeNoteTests.a */,
+				AE757F4E334F61C89BEA1582 /* libPods-LifeNote.a */,
+				600517B67B8ADAB5DADCE0B7 /* libPods-LifeNote-LifeNoteTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		E592D635C0DE7160467009DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0869280A70146D310FB597CC /* Pods-LifeNote.debug.xcconfig */,
-				55F132A90F6F4711D04F810E /* Pods-LifeNote.release.xcconfig */,
-				5323DADFC5A98901EB8A25C2 /* Pods-LifeNote-LifeNoteTests.debug.xcconfig */,
-				D8BB5FAA9E8BD35D572AE421 /* Pods-LifeNote-LifeNoteTests.release.xcconfig */,
+				1EFD36C5B4127B1B91823CB9 /* Pods-LifeNote.debug.xcconfig */,
+				0EDE49700B0F09470F047596 /* Pods-LifeNote.release.xcconfig */,
+				5A1E20807904786DB0D75B54 /* Pods-LifeNote-LifeNoteTests.debug.xcconfig */,
+				BF445BC07AA3D01565B968AD /* Pods-LifeNote-LifeNoteTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LifeNoteTests" */;
 			buildPhases = (
-				3FA8BEB37C2FFCC4ED854DE3 /* [CP] Check Pods Manifest.lock */,
+				F4314086B9138D89832CC2BD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				0C46DD8664A648EF21F8A522 /* [CP] Embed Pods Frameworks */,
-				68C4F50DEAF8DAC143AA023E /* [CP] Copy Pods Resources */,
+				ECE643748649994F10C7A8F0 /* [CP] Embed Pods Frameworks */,
+				E9B63FF6A368FCC81967F844 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "LifeNote" */;
 			buildPhases = (
-				EE836011D74E6A7BBA62E231 /* [CP] Check Pods Manifest.lock */,
+				D5060F652F056ABBAADE1C1A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				E9F9BE429EE5364DC038DFFB /* [CP] Embed Pods Frameworks */,
-				8269550F77B96AD9870FD4B3 /* [CP] Copy Pods Resources */,
+				F0C2C58498EBE04C4E59C5B3 /* [CP] Embed Pods Frameworks */,
+				E34F1BED60628F5CD8A02178 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,24 +264,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		0C46DD8664A648EF21F8A522 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3FA8BEB37C2FFCC4ED854DE3 /* [CP] Check Pods Manifest.lock */ = {
+		D5060F652F056ABBAADE1C1A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,31 +279,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LifeNote-LifeNoteTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LifeNote-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68C4F50DEAF8DAC143AA023E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8269550F77B96AD9870FD4B3 /* [CP] Copy Pods Resources */ = {
+		E34F1BED60628F5CD8A02178 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -337,7 +303,41 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeNote/Pods-LifeNote-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E9F9BE429EE5364DC038DFFB /* [CP] Embed Pods Frameworks */ = {
+		E9B63FF6A368FCC81967F844 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE643748649994F10C7A8F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeNote-LifeNoteTests/Pods-LifeNote-LifeNoteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0C2C58498EBE04C4E59C5B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,7 +354,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LifeNote/Pods-LifeNote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE836011D74E6A7BBA62E231 /* [CP] Check Pods Manifest.lock */ = {
+		F4314086B9138D89832CC2BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,7 +369,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LifeNote-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-LifeNote-LifeNoteTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5323DADFC5A98901EB8A25C2 /* Pods-LifeNote-LifeNoteTests.debug.xcconfig */;
+			baseConfigurationReference = 5A1E20807904786DB0D75B54 /* Pods-LifeNote-LifeNoteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8BB5FAA9E8BD35D572AE421 /* Pods-LifeNote-LifeNoteTests.release.xcconfig */;
+			baseConfigurationReference = BF445BC07AA3D01565B968AD /* Pods-LifeNote-LifeNoteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +479,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0869280A70146D310FB597CC /* Pods-LifeNote.debug.xcconfig */;
+			baseConfigurationReference = 1EFD36C5B4127B1B91823CB9 /* Pods-LifeNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -505,7 +505,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55F132A90F6F4711D04F810E /* Pods-LifeNote.release.xcconfig */;
+			baseConfigurationReference = 0EDE49700B0F09470F047596 /* Pods-LifeNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
