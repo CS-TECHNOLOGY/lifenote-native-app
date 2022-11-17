@@ -31,6 +31,7 @@
     "react-hook-form": "^7.38.0",
     "react-native": "0.67.4",
     "react-native-animated-spinkit": "^1.5.2",
+    "react-native-calendars": "^1.1291.1",
     "react-native-config": "^1.4.6",
     "react-native-device-info": "^10.0.2",
     "react-native-fast-image": "^8.5.11",

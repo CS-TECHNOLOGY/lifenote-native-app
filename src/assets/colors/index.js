@@ -21,4 +21,5 @@ export default {
   CS_TEXT_DISABLE: '#9BA9B9',
   CS_DARK: '#000022',
   CS_WHITE_MODE: '#ffffff',
+  CS_CALENDAR: '#283747',
 };

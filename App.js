@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { RecoilRoot } from 'recoil';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Root from './src';
