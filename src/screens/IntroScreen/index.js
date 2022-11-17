@@ -13,7 +13,7 @@ const IntroScreen = () => {
     setLogin({
       isLogin: 'LOGIN',
     });
-  }, []);
+  }, [setLogin]);
   return (
     <Box flex={1}>
       <Swiper

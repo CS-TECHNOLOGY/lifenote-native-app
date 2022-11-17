@@ -17,6 +17,11 @@ const drawers = [
     image: Images.SECURITY,
   },
   {
+    title: 'Pattern',
+    key: 'pattern_key',
+    image: Images.PATTERN,
+  },
+  {
     title: 'Noted',
     key: 'noted_key',
     image: Images.TEXT_SNIPPET,
