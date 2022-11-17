@@ -14,6 +14,7 @@ export default function HomeScreen() {
   const scaleValue = useRef(new Animated.Value(1)).current;
   const closeButtonOffset = useRef(new Animated.Value(0)).current;
   const newRadius = showMenu ? normalize(15) : 0;
+  const opacity = showMenu ? 0.5 : 1;
   const openClose = () => {
     Animated.timing(scaleValue, {
       toValue: showMenu ? 1 : 0.88,
@@ -105,7 +106,8 @@ export default function HomeScreen() {
         <ScrollView
           pointerEvents={showMenu ? 'none' : 'auto'}
           bounces={false}
-          style={styles.contentContainer}>
+          style={[styles.contentContainer, { opacity: opacity }]}
+          contentContainerStyle={styles.contentScroll}>
           {renderScreen(currentTab)}
         </ScrollView>
       </Animated.View>
@@ -137,7 +139,8 @@ const styles = StyleSheet.create({
     marginTop: normalize(30),
     paddingBottom: normalize(30),
   },
-  contentContainer: {
-    paddingBottom: normalize(30),
+  contentContainer: {},
+  contentScroll: {
+    flex: 1,
   },
 });

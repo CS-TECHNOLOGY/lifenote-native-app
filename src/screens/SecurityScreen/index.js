@@ -82,13 +82,11 @@ export default function SecurityScreen() {
       </Text>
       <Button onPress={onSet} title="Set pattern lock" />
       <Button onPress={onVerify} title="Verify" />
-      <Button onPress={onVerify} title="Remove pattern" />
-      <Button onPress={onVerify} title="Forgot pattern" />
       <Animated.View style={ms}>
         <SafeAreaView style={styles.sfv}>
           <ImageIcon
             name={Images.CHEVERON_LEFT_NEW}
-            tintColor={Colors.CS_BLUE}
+            tintColor={Colors.CS_SKY_BLUE}
             size={30}
             onPress={modal.close}
             margin={[10]}
@@ -118,7 +116,7 @@ const Button = ({ title, onPress }) => {
       LeftItem={false}
       onPress={onPress}
       rightItem={false}
-      style={{ width: '60%' }}
+      style={styles.button}
     />
   );
 };
@@ -128,24 +126,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     paddingHorizontal: normalize(15),
-    backgroundColor: Colors.CS_BACK_GROUND,
+    backgroundColor: Colors.TRANSPARENT,
     justifyContent: 'center',
   },
   modal: {
     position: 'absolute',
     backgroundColor: Colors.CS_DARK,
     width: '80%',
-    height: '60%',
+    height: '70%',
     borderRadius: normalize(10),
   },
   sfv: {
     flex: 1,
     alignItems: 'flex-start',
-    paddingTop: Platform.select({ android: 30, web: 20, ios: 30 }),
+    paddingTop: Platform.select({ android: 10, ios: 10 }),
   },
   btnc: {
     marginLeft: 16,
     fontSize: 18,
     color: '#007AFF',
+  },
+  button: {
+    width: '60%',
   },
 });
