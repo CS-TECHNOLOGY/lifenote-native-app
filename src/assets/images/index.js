@@ -23,4 +23,5 @@ export default {
   DRAWER_MENU: require('./reorder.png'),
   LOGOUT: require('./logout.png'),
   PATTERN: require('./pattern.png'),
+  SYNC: require('./sync.png'),
 };

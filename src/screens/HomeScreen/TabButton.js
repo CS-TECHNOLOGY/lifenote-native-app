@@ -9,26 +9,32 @@ import { useNavigation } from '@react-navigation/native';
 
 const TabButton = ({ currentTab, setCurrentTab, title, image, closeMenu }) => {
   const navigation = useNavigation();
+  const changeTab = () => {
+    switch (title) {
+      case 'LogOut':
+        modalGlobalRef.current?.show({
+          type: '',
+          title: 'Do you want logout ?',
+          content: 'After logout your data will be saved on the server',
+          onDone: () => {
+            storage.set('isGuest', false);
+            navigation.navigate('LoginScreen');
+          },
+        });
+        break;
+      case 'Sync':
+        modalGlobalRef.current?.show({
+          type: 'success',
+        });
+        break;
+      default:
+        setCurrentTab && setCurrentTab(title);
+        closeMenu && closeMenu(true);
+        break;
+    }
+  };
   return (
-    <Box
-      pressable
-      onPress={() => {
-        if (title === 'LogOut') {
-          modalGlobalRef.current?.show({
-            type: '',
-            title: 'Do you want logout ?',
-            content: 'After logout your data will be saved on the server',
-            onDone: () => {
-              storage.set('isGuest', false);
-              navigation.navigate('LoginScreen');
-            },
-          });
-        } else {
-          setCurrentTab && setCurrentTab(title);
-          closeMenu && closeMenu(true);
-        }
-      }}
-      width="100%">
+    <Box pressable onPress={changeTab} width="100%">
       <Box
         flexDirection="row"
         align="center"
@@ -41,7 +47,7 @@ const TabButton = ({ currentTab, setCurrentTab, title, image, closeMenu }) => {
           {
             borderRadius: normalize(8),
           },
-          title === 'LogOut' && styles.logout,
+          title === 'Sync' && styles.logout,
         ]}>
         <ImageIcon
           source={image}

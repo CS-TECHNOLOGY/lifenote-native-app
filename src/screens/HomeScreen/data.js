@@ -32,6 +32,11 @@ const drawers = [
     image: Images.NOTIFICATIONS_ACTIVE,
   },
   {
+    title: 'Sync',
+    key: 'sync_key',
+    image: Images.SYNC,
+  },
+  {
     title: 'LogOut',
     key: 'logout_key',
     image: Images.LOGOUT,
