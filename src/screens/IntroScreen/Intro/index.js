@@ -1,91 +1,57 @@
 import React from 'react';
-import { ScrollView } from 'react-native-gesture-handler';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import {
+  getBottomSpace,
+  getStatusBarHeight,
+} from 'react-native-iphone-x-helper';
 import { Colors, Lottie } from '../../../assets';
 import { Box, ImageLottie, Text, ButtonCustomize } from '../../../components';
 import { normalize } from '../../../configs/commons';
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const Intro = ({ one, two, three, onDone, onNext }) => {
-  const dot = [
-    {
-      isFocus: false,
-      key: 'one',
-      color: one ? Colors.CS_DARK_RED : Colors.CS_WHITE,
-    },
-    {
-      isFocus: false,
-      key: 'two',
-      color: two ? Colors.CS_DARK_RED : Colors.CS_WHITE,
-    },
-    {
-      isFocus: false,
-      key: 'three',
-      color: three ? Colors.CS_DARK_RED : Colors.CS_WHITE,
-    },
-  ];
-  const Lottie_file = one
-    ? Lottie.INTRO_ONE
-    : two
-    ? Lottie.INTRO_TWO
-    : Lottie.INTRO_THREE;
+const Intro = ({ onDone }) => {
   return (
     <Box
       padding={[getStatusBarHeight() + 50, 15, 0, 15]}
-      background={Colors.CS_BLUE}
+      background={Colors.CS_BACK_GROUND}
       flex={1}
       align="center">
+      <ImageLottie name={Lottie.INTRO_THREE} width={'100%'} height={450} />
       <Text
-        style={styles.skip}
-        color={Colors.CS_DARK_RED}
-        fontWeight={500}
-        size={14}
-        onPress={onDone}>
-        {'Skip'}
-      </Text>
-      <ImageLottie name={Lottie_file} width={280} height={280} />
-      <Text
-        margin={[20, 0, 40, 0]}
+        margin={[0, 30]}
         textAlign="center"
-        size={20}
-        fontWeight={500}>
-        {'Life Note'}
+        color={Colors.CS_GRAY}
+        size={17}
+        fontWeight={'100'}
+        style={styles.greeting}>
+        {'Your notes on your phone, your love and your life'}
       </Text>
-      <ScrollView
-        horizontal={true}
-        showsHorizontalScrollIndicator={false}
-        bounces={false}
-        style={{
-          maxHeight: normalize(12),
-        }}>
-        {dot.map((item, index) => (
-          <Box
-            key={`${item.key}_${index}`}
-            width={12}
-            height={12}
-            background={item.color}
-            margin={[0, 8]}
-          />
-        ))}
-      </ScrollView>
       <ButtonCustomize
-        label={three ? 'Start' : 'Next'}
+        label={'Finish'}
+        background={Colors.CS_PURPLE}
+        styleLabel={styles.label}
+        rightItem={false}
         style={styles.button}
-        margin={[40, 0, 0, 0]}
-        normal={true}
-        background={Colors.CS_DARK_RED}
-        onPress={three ? onDone : onNext}
+        onPress={onDone}
       />
     </Box>
   );
 };
 const styles = StyleSheet.create({
-  button: { width: '60%' },
-  skip: {
+  button: {
+    width: '60%',
     position: 'absolute',
-    marginTop:
-      Platform.OS === 'ios' ? getStatusBarHeight() + 30 : getStatusBarHeight(),
-    right: normalize(15),
+    bottom: getBottomSpace() + normalize(100),
+    borderWidth: 1,
+    borderColor: Colors.CS_PURPLE,
+    borderRadius: normalize(10),
+  },
+  greeting: {
+    fontStyle: 'italic',
+  },
+  label: {
+    color: Colors.CS_WHITE,
+    letterSpacing: 2,
+    fontStyle: 'italic',
   },
 });
 export default React.memo(Intro);

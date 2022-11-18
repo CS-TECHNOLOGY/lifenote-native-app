@@ -14,6 +14,7 @@ const IntroLogin = ({
   buttonsAnimatedStyle,
   loginHandler,
   registerHandler,
+  loginWidthGuest,
 }) => {
   return (
     <>
@@ -51,6 +52,17 @@ const IntroLogin = ({
               letterSpacing={0.5}
               fontWeight="600">
               Register
+            </Text>
+          </Box>
+        </Animated.View>
+        <Animated.View style={buttonsAnimatedStyle}>
+          <Box pressable style={styles.button} onPress={loginWidthGuest}>
+            <Text
+              size={20}
+              color={Colors.CS_WHITE}
+              letterSpacing={0.5}
+              fontWeight="600">
+              Login with Guest
             </Text>
           </Box>
         </Animated.View>

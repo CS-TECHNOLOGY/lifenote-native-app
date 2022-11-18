@@ -11,7 +11,7 @@ import { Colors } from '../../assets';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 export default function MenuNotes() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggleOpen = () => {
     setIsOpen(value => !value);
     LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
