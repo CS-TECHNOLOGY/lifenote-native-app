@@ -25,6 +25,7 @@ const LoginScreen = () => {
     handleSubmit,
     errors,
     onSubmit,
+    loginWidthGuest,
   } = useAnimatedLogin();
 
   return (
@@ -37,6 +38,7 @@ const LoginScreen = () => {
         buttonsAnimatedStyle={buttonsAnimatedStyle}
         loginHandler={loginHandler}
         registerHandler={registerHandler}
+        loginWidthGuest={loginWidthGuest}
       />
       <Animated.View style={[styles.formInputContainer, formAnimatedStyle]}>
         <KeyboardAwareScrollView

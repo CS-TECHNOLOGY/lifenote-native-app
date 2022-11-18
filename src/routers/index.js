@@ -7,19 +7,24 @@ import ForgotPasswordScreen from '../screens/ForgotPassword';
 import { useAccountValue } from '../atoms/account';
 import ProfileScreen from '../screens/ProfileScreen';
 import HomeScreen from '../screens/HomeScreen';
+import { storage } from '../configs/storage';
 
 const FirstStack = createStackNavigator();
 
 const Router = () => {
+  const firstIntro = storage.getBoolean('firstIntro');
   const { isLogin } = useAccountValue();
+  const isGuest = storage.getBoolean('isGuest');
 
   return (
     <FirstStack.Navigator screenOptions={{ headerShown: false }}>
-      {isLogin === '' ? (
+      {!firstIntro || isLogin === '' ? (
         <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
       ) : (
         <>
-          <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
+          {!isGuest && (
+            <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
+          )}
           <FirstStack.Screen name="HomeScreen" component={HomeScreen} />
           <FirstStack.Screen
             name="ForgotPasswordScreen"

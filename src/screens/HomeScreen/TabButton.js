@@ -4,8 +4,11 @@ import { Box, ImageIcon, Text } from '../../components';
 import { normalize } from '../../configs/commons';
 import { StyleSheet } from 'react-native';
 import { modalGlobalRef } from '../../routers/configRef';
+import { storage } from '../../configs/storage';
+import { useNavigation } from '@react-navigation/native';
 
 const TabButton = ({ currentTab, setCurrentTab, title, image, closeMenu }) => {
+  const navigation = useNavigation();
   return (
     <Box
       pressable
@@ -15,6 +18,10 @@ const TabButton = ({ currentTab, setCurrentTab, title, image, closeMenu }) => {
             type: '',
             title: 'Do you want logout ?',
             content: 'After logout your data will be saved on the server',
+            onDone: () => {
+              storage.set('isGuest', false);
+              navigation.navigate('LoginScreen');
+            },
           });
         } else {
           setCurrentTab && setCurrentTab(title);

@@ -15,6 +15,7 @@ import {
   statusCodes,
 } from '@react-native-google-signin/google-signin';
 import { useForm } from 'react-hook-form';
+import { storage } from '../../configs/storage/index';
 
 export default function useAnimatedLogin() {
   const lottiePosition = useSharedValue(1);
@@ -114,6 +115,11 @@ export default function useAnimatedLogin() {
     }
   };
 
+  const loginWidthGuest = useCallback(() => {
+    storage.set('isGuest', true);
+    navigation.navigate('HomeScreen');
+  }, [navigation]);
+
   const onSubmit = useCallback(
     data => navigation.navigate('HomeScreen'),
     [navigation],
@@ -136,5 +142,6 @@ export default function useAnimatedLogin() {
     handleSubmit,
     errors,
     onSubmit,
+    loginWidthGuest,
   };
 }
