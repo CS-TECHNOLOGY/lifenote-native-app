@@ -1,5 +1,11 @@
 import React, { useRef, useState } from 'react';
-import { Animated, SafeAreaView, StyleSheet, ScrollView } from 'react-native';
+import {
+  Animated,
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+} from 'react-native';
 import { Colors, Images } from '../../assets';
 import { Box, ImageIcon, NavBar, Text } from '../../components';
 import TabButton from './TabButton';
@@ -58,7 +64,7 @@ export default function HomeScreen() {
           Đặng Quyết Huynh
         </Text>
         <ScrollView style={styles.scroll}>
-          {drawers.slice(0, drawers.length - 1).map(item => (
+          {drawers.slice(0, drawers.length - 2).map(item => (
             <TabButton
               currentTab={currentTab}
               image={item.image}
@@ -70,7 +76,7 @@ export default function HomeScreen() {
           ))}
         </ScrollView>
         <Box>
-          {drawers.slice(drawers.length - 1, drawers.length).map(item => (
+          {drawers.slice(drawers.length - 2, drawers.length).map(item => (
             <TabButton
               currentTab={currentTab}
               image={item.image}
@@ -103,13 +109,16 @@ export default function HomeScreen() {
             </Box>
           )}
         />
-        <ScrollView
-          pointerEvents={showMenu ? 'none' : 'auto'}
-          bounces={false}
-          style={[styles.contentContainer, { opacity: opacity }]}
-          contentContainerStyle={styles.contentScroll}>
-          {renderScreen(currentTab)}
-        </ScrollView>
+        <View
+          style={styles.contentScroll}
+          pointerEvents={showMenu ? 'none' : 'auto'}>
+          <ScrollView
+            bounces={false}
+            style={[styles.contentContainer, { opacity: opacity }]}
+            contentContainerStyle={styles.contentScroll}>
+            {renderScreen(currentTab)}
+          </ScrollView>
+        </View>
       </Animated.View>
     </SafeAreaView>
   );
