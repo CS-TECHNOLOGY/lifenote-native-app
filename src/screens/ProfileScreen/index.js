@@ -3,7 +3,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Colors, Images } from '../../assets';
-import { Box, ButtonCustomize, ImageIcon, NavBar } from '../../components';
+import { Box, ButtonCustomize, ImageIcon } from '../../components';
 import HandleChangeImage from './HandleChangeImage';
 import styles from './styles';
 
@@ -11,7 +11,6 @@ const ProfileScreen = () => {
   const navigation = useNavigation();
   const {
     control,
-    handleSubmit,
     formState: { errors },
   } = useForm({
     defaultValues: {
