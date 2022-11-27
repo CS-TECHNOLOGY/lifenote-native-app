@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
@@ -7,6 +8,7 @@ import HandleChangeImage from './HandleChangeImage';
 import styles from './styles';
 
 const ProfileScreen = () => {
+  const navigation = useNavigation();
   const {
     control,
     handleSubmit,
@@ -17,6 +19,9 @@ const ProfileScreen = () => {
       email: '',
     },
   });
+  const onSubmit = () => {
+    navigation.goBack();
+  };
   return (
     <Box width="100%" height="100%" background={Colors.TRANSPARENT}>
       <KeyboardAwareScrollView
@@ -37,7 +42,7 @@ const ProfileScreen = () => {
           label={'Save Chane'}
           background={Colors.CS_PURPLE}
           styleLabel={{ color: Colors.CS_WHITE }}
-          onPress={() => null}
+          onPress={onSubmit}
           rightItem={null}
         />
       </Box>

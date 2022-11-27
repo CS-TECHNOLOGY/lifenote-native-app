@@ -22,4 +22,7 @@ export default {
   CS_DARK: '#000022',
   CS_WHITE_MODE: '#ffffff',
   CS_CALENDAR: '#283747',
+  CS_GRANITE: '#827D89',
+  CS_SOFT_PEACH: '#EFEEF0',
+  CS_FADED_RED: '#CE3A54',
 };

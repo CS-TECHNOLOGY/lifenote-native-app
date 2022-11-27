@@ -6,6 +6,7 @@ import SecurityScreen from '../SecurityScreen';
 import MenuNotes from '../MenuNotes';
 import CalendarNoted from '../CalendarNoted';
 import ProfileScreen from '../ProfileScreen';
+import SettingScreen from '../SettingScreen';
 
 const renderScreen = route => {
   switch (route) {
@@ -16,7 +17,7 @@ const renderScreen = route => {
     case 'Noted':
       return <CalendarNoted />;
     case 'Profile':
-      return <ProfileScreen />;
+      return <SettingScreen />;
     default:
       return (
         <Text

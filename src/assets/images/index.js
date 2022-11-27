@@ -23,4 +23,11 @@ export default {
   DRAWER_MENU: require('./reorder.png'),
   LOGOUT: require('./logout.png'),
   PATTERN: require('./pattern.png'),
+  EMAIL: require('./email_icon.png'),
+  EDIT_PROFILE: require('./edit_icon.png'),
+  RIGHT_ARROW: require('./right_arrow.png'),
+  CLOCK: require('./clock.png'),
+  FONT_SIZE: require('./font_size.png'),
+  NOTIFICATION: require('./notification.png'),
+  LOGOUT_SETTING: require('./logout_setting.png'),
 };
