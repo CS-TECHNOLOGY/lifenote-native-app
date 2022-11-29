@@ -12,6 +12,7 @@ import InputCustomize from './InputCustomize';
 import InputItem from './InputItem';
 import ModalGlobal from './ModalGlobal';
 import PatternLock from './PatternLock';
+import BottomSheet from './BottomSheet/index';
 
 export {
   Box,
@@ -28,6 +29,7 @@ export {
   InputItem,
   ModalGlobal,
   PatternLock,
+  BottomSheet,
 };
 
 export default {
@@ -45,4 +47,5 @@ export default {
   InputItem,
   ModalGlobal,
   PatternLock,
+  BottomSheet,
 };
