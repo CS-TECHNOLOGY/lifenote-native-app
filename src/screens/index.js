@@ -6,6 +6,7 @@ import HomeScreen from './HomeScreen/index';
 import SecurityScreen from './SecurityScreen/index';
 import MenuNotes from './MenuNotes/index';
 import CalendarNoted from './CalendarNoted/index';
+import NoteList from './NoteList/index';
 export default {
   IntroScreen,
   LoginScreen,
@@ -15,4 +16,5 @@ export default {
   SecurityScreen,
   MenuNotes,
   CalendarNoted,
+  NoteList,
 };

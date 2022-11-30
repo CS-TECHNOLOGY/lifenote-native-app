@@ -9,12 +9,18 @@ import NoteCheckBox from './NoteCheckBox';
 import NoteDefault from './NoteDefault';
 import { Colors } from '../../assets';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { useNavigation } from '@react-navigation/native';
 
 export default function MenuNotes() {
   const [isOpen, setIsOpen] = useState(true);
+  const navigation = useNavigation();
+
   const toggleOpen = () => {
     setIsOpen(value => !value);
     LayoutAnimation.configureNext(LayoutAnimation.Presets.linear);
+  };
+  const goNoteList = () => {
+    navigation.navigate('NoteList');
   };
 
   const renderNote = ({ item, i }) => {
@@ -31,9 +37,21 @@ export default function MenuNotes() {
   };
   return (
     <Box style={styles.contentContainer}>
-      <Box margin={[10, 0]} pressable onPress={toggleOpen} activeOpacity={0.6}>
-        <Text fontWeight={700} size={17}>
+      <Box
+        margin={[10, 0]}
+        flexDirection="row"
+        justify="space-between"
+        align="baseline"
+        activeOpacity={0.6}>
+        <Text fontWeight={700} size={17} onPress={toggleOpen}>
           {'Detail new note'}
+        </Text>
+        <Text
+          fontWeight={500}
+          color={Colors.CS_GRAY}
+          size={12}
+          onPress={goNoteList}>
+          {'See all'}
         </Text>
       </Box>
       <Box style={[styles.dropDown, isOpen ? styles.heightDown : undefined]}>

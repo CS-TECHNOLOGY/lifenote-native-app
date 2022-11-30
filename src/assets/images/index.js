@@ -24,4 +24,6 @@ export default {
   LOGOUT: require('./logout.png'),
   PATTERN: require('./pattern.png'),
   SYNC: require('./sync.png'),
+  DELETE: require('./trash.png'),
+  EDIT: require('./edit.png'),
 };
