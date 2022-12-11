@@ -102,7 +102,7 @@ export default function HomeScreen() {
           componentLeft={() => (
             <Box width={'100%'} height={'100%'} justify="center">
               <ImageIcon
-                source={!showMenu ? Images.MENU : Images.ARROW_RIGHT}
+                source={Images.ARROW_RIGHT}
                 size={27}
                 tintColor={Colors.CS_PURPLE}
               />
