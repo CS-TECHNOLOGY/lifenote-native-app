@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { Colors } from '../../assets';
 import { normalize } from '../../configs/commons';
+import { getBottomSpace } from '../../hooks/useIPhone';
 
 const { height } = Dimensions.get('window');
 const styles = StyleSheet.create({

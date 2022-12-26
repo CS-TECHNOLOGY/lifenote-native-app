@@ -24,4 +24,7 @@ export default {
   LOGOUT: require('./logout.png'),
   PATTERN: require('./pattern.png'),
   SYNC: require('./sync.png'),
+  CREATE: require('./create.png'),
+  SYNC_ACCOUNT: require('./syncAccount.png'),
+  PENCIL: require('./pencil.png'),
 };

@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import {
   useSharedValue,
   useAnimatedStyle,
@@ -16,6 +15,7 @@ import {
 } from '@react-native-google-signin/google-signin';
 import { useForm } from 'react-hook-form';
 import { storage } from '../../configs/storage/index';
+import { getStatusBarHeight } from '../../hooks/useIPhone';
 
 export default function useAnimatedLogin() {
   const lottiePosition = useSharedValue(1);

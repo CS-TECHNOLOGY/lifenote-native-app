@@ -1,12 +1,10 @@
 import React from 'react';
-import {
-  getBottomSpace,
-  getStatusBarHeight,
-} from 'react-native-iphone-x-helper';
+
 import { Colors, Lottie } from '../../../assets';
 import { Box, ImageLottie, Text, ButtonCustomize } from '../../../components';
 import { normalize } from '../../../configs/commons';
 import { StyleSheet } from 'react-native';
+import { getBottomSpace, getStatusBarHeight } from '../../../hooks/useIPhone';
 
 const Intro = ({ onDone }) => {
   return (

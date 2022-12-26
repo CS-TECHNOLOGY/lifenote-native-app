@@ -34,7 +34,7 @@ const drawers = [
   {
     title: 'Sync',
     key: 'sync_key',
-    image: Images.SYNC,
+    image: Images.SYNC_ACCOUNT,
   },
   {
     title: 'LogOut',

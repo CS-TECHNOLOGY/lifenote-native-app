@@ -12,6 +12,7 @@ import TabButton from './TabButton';
 import renderScreen from './renderScreen';
 import { normalize } from '../../configs/commons';
 import drawers from './data';
+import RightNavBar from './RightNavBar';
 
 export default function HomeScreen() {
   const [currentTab, setCurrentTab] = useState('Menu');
@@ -108,6 +109,7 @@ export default function HomeScreen() {
               />
             </Box>
           )}
+          componentRight={() => <RightNavBar currentTab={currentTab} />}
         />
         <View
           style={styles.contentScroll}
