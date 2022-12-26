@@ -6,8 +6,8 @@ import styles from './styles';
 import Box from '../Box';
 import ImageIcon from '../ImageIcon';
 import Text from '../Text';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { getDefaultHeaderHeight } from '../../configs/commons';
+import { getStatusBarHeight } from '../../hooks/useIPhone';
 const isEqual = require('react-fast-compare');
 
 const COLOR = Colors.CS_PURPLE;

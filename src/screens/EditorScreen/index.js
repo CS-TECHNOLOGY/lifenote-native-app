@@ -1,9 +1,25 @@
-import React, { useRef, useState } from 'react';
-import { View } from 'react-native';
-import { RichEditor } from 'react-native-pell-rich-editor';
+import React, { useCallback, useRef, useState } from 'react';
+import {
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  TextInput,
+} from 'react-native';
+import {
+  actions,
+  RichEditor,
+  RichToolbar,
+} from 'react-native-pell-rich-editor';
 import { Colors, Images } from '../../assets';
-import { BottomSheet, Box, ImageIcon, NavBar } from '../../components';
+import { BottomSheet, Box, ImageIcon, NavBar, Text } from '../../components';
 import styles from './styles';
+import ImagePicker from 'react-native-image-crop-picker';
+import ImgToBase64 from 'react-native-image-base64';
+import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
+import HotKey from '../../components/HotKey';
+
+const HEIGHT_IMAGE = 180;
+const HotkeyAnimated = Animated.createAnimatedComponent(HotKey);
 
 const EditorScreen = () => {
   const richText = useRef();
@@ -18,13 +34,42 @@ const EditorScreen = () => {
     }
   };
 
+  const onClick = useCallback(() => {
+    const isActive = ref?.current?.isActive();
+    if (isActive) {
+      ref?.current?.scrollTo(0);
+    } else {
+      ref?.current?.scrollTo(-200);
+    }
+  }, []);
+  const openGalleryClickProfile = () => {
+    ImagePicker.openPicker({
+      width: HEIGHT_IMAGE,
+      height: HEIGHT_IMAGE,
+      cropping: true,
+    })
+      .then(image => {
+        onPressAddImage(image);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+  const onPressAddImage = async image => {
+    await ImgToBase64.getBase64String(image.path)
+      .then(base64String => {
+        const str = `data:${image.mime};base64,${base64String}`;
+        richText.current?.insertImage(str);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   return (
-    <Box width="100%" height="100%" background={Colors.TRANSPARENT}>
+    <Box width="100%" height="100%" background={Colors.CS_WHITE}>
       <NavBar
         title={'NOTE'}
         COLOR_TITLE={Colors.CS_PURPLE}
-        // handleLeftBack={openClose}
-
         componentLeft={() => (
           <Box width={'100%'} height={'100%'} justify="center">
             <ImageIcon
@@ -36,18 +81,41 @@ const EditorScreen = () => {
         )}
       />
       <Box width="100%" height="100%" background={Colors.TRANSPARENT}>
-        <RichEditor
-          ref={richText}
-          editorStyle={{ backgroundColor: Colors.TRANSPARENT }}
-          onChange={richTextHandle}
-          placeholder="Untitled :)"
-          androidHardwareAccelerationDisabled={true}
-          style={styles.richTextEditorStyle}
+        <TextInput
+          style={styles.title}
+          value={''}
+          placeholder="New Title"
+          numberOfLines={1}
         />
-        {/* <RichToolbar
+        <Text
+          size={14}
+          color={Colors.CS_GRAY}
+          margin={[10, 15, 20, 15]}
+          numberOfLines={10}>
+          Octobor 13, 22:00 Tue | 300 words
+        </Text>
+        <ScrollView scrollEnabled={false}>
+          <KeyboardAvoidingView
+            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            style={styles.content}>
+            <RichEditor
+              scrollEnabled={true}
+              ref={richText}
+              editorStyle={{ backgroundColor: Colors.CS_WHITE }}
+              onChange={richTextHandle}
+              placeholder="Description"
+              androidHardwareAccelerationDisabled={true}
+              style={styles.richTextEditorStyle}
+              usecontainer={true}
+            />
+          </KeyboardAvoidingView>
+        </ScrollView>
+      </Box>
+      <BottomSheet ref={ref}>
+        <RichToolbar
           editor={richText}
-          selectedIconTint="#873c1e"
-          iconTint="#312921"
+          selectedIconTint={Colors.CSS_BROWN}
+          iconTint={Colors.CS_BLACK}
           actions={[
             actions.insertImage,
             actions.setBold,
@@ -58,12 +126,17 @@ const EditorScreen = () => {
             actions.setStrikethrough,
             actions.setUnderline,
           ]}
-          style={styles.richTextToolbarStyle}
-        /> */}
-      </Box>
-      <BottomSheet ref={ref}>
-        <View />
+          onPressAddImage={openGalleryClickProfile}
+        />
       </BottomSheet>
+      <HotkeyAnimated
+        entering={FadeIn}
+        exiting={FadeOut}
+        data={{
+          src: Images.PENCIL,
+        }}
+        onClick={onClick}
+      />
     </Box>
   );
 };

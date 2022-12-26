@@ -1,8 +1,8 @@
 import React from 'react';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { InputItem, Text } from '../../components';
 import HandleLogin from './HandleLogin';
 import { isEqual } from 'react-fast-compare';
+import { getStatusBarHeight } from '../../hooks/useIPhone';
 
 const ContentLogin = ({
   control,

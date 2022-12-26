@@ -20,7 +20,6 @@ const BottomSheet = React.forwardRef(({ children }, ref) => {
   const scrollTo = useCallback(
     destination => {
       'worklet';
-      console.log('destination', destination);
       active.value = destination !== 0;
 
       translateY.value = withSpring(destination, { damping: 50 });

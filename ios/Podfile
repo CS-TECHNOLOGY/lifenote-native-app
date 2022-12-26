@@ -17,6 +17,7 @@ target 'LifeNote' do
   )
   
   pod 'GoogleSignIn'
+  pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
 
   target 'LifeNoteTests' do
     inherit! :complete

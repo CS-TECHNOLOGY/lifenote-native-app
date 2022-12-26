@@ -24,7 +24,7 @@ const Router = () => {
       ) : (
         <>
           {!isGuest && (
-            <FirstStack.Screen name="LoginScreen" component={EditorScreen} />
+            <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
           )}
           <FirstStack.Screen name="HomeScreen" component={HomeScreen} />
           <FirstStack.Screen
@@ -32,6 +32,7 @@ const Router = () => {
             component={ForgotPasswordScreen}
           />
           <FirstStack.Screen name="ProfileScreen" component={ProfileScreen} />
+          <FirstStack.Screen name="EditorScreen" component={EditorScreen} />
         </>
       )}
     </FirstStack.Navigator>

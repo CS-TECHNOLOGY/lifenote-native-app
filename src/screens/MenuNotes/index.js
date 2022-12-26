@@ -8,7 +8,7 @@ import NoteList from './NoteList';
 import NoteCheckBox from './NoteCheckBox';
 import NoteDefault from './NoteDefault';
 import { Colors } from '../../assets';
-import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { getBottomSpace } from '../../hooks/useIPhone';
 
 export default function MenuNotes() {
   const [isOpen, setIsOpen] = useState(true);
@@ -56,11 +56,8 @@ export default function MenuNotes() {
         showsVerticalScrollIndicator={false}
         renderItem={({ item, i }) => renderNote({ item: item, i: i })}
         keyExtractor={(item, i) => `${item.text}_${i}`}
-        // refreshing={true}
-        // onRefresh={}
         onEndReachedThreshold={0.1}
         contentContainerStyle={styles.bottomSpace}
-        // onEndReached={}
       />
     </Box>
   );

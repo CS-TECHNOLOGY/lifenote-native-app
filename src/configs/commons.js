@@ -1,6 +1,6 @@
 import { Dimensions, PixelRatio, Platform } from 'react-native';
-import { getStatusBarHeight, isIphoneX } from 'react-native-iphone-x-helper';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { getStatusBarHeight, isIphoneX } from '../hooks/useIPhone';
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const scale = SCREEN_WIDTH / 360;
 const heightBaseScale = SCREEN_HEIGHT / 896;
