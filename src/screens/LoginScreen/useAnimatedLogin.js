@@ -14,8 +14,8 @@ import {
   statusCodes,
 } from '@react-native-google-signin/google-signin';
 import { useForm } from 'react-hook-form';
-import { storage } from '../../configs/storage/index';
 import { getStatusBarHeight } from '../../hooks/useIPhone';
+import { useAccountState } from '../../atoms/account';
 
 export default function useAnimatedLogin() {
   const lottiePosition = useSharedValue(1);
@@ -23,6 +23,7 @@ export default function useAnimatedLogin() {
   const { height, width } = Dimensions.get('window');
   const [isRegistering, setIsRegistering] = useState(false);
   const navigation = useNavigation();
+  const [logout, setLogout] = useAccountState();
 
   const {
     control,
@@ -115,10 +116,12 @@ export default function useAnimatedLogin() {
     }
   };
 
-  const loginWidthGuest = useCallback(() => {
-    storage.set('isGuest', true);
-    navigation.navigate('HomeScreen');
-  }, [navigation]);
+  const loginWidthGuest = () => {
+    setLogout({
+      ...logout,
+      isGuest: 'ISGUEST',
+    });
+  };
 
   const onSubmit = useCallback(
     data => navigation.navigate('HomeScreen'),

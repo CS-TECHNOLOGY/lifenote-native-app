@@ -1,11 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 import React from 'react';
-import { Text } from '../../components';
-import { modalGlobalRef } from '../../routers/configRef';
+import { Box, ImageIcon } from '../../components';
 import SecurityScreen from '../SecurityScreen';
 import MenuNotes from '../MenuNotes';
 import CalendarNoted from '../CalendarNoted';
-import ProfileScreen from '../ProfileScreen';
+import { Images } from '../../assets';
 
 const renderScreen = route => {
   switch (route) {
@@ -15,18 +14,13 @@ const renderScreen = route => {
       return <SecurityScreen />;
     case 'Noted':
       return <CalendarNoted />;
-    case 'Profile':
-      return <ProfileScreen />;
+    // case 'Profile':
+    //   return <ProfileScreen />;
     default:
       return (
-        <Text
-          onPress={() =>
-            modalGlobalRef.current?.show({
-              type: 'success',
-            })
-          }>
-          Normal Screen
-        </Text>
+        <Box width={'100%'} height={'100%'} justify="center" align="center">
+          <ImageIcon name={Images.MAINTAIN} size={'70%'} />
+        </Box>
       );
   }
 };

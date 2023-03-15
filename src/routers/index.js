@@ -9,30 +9,36 @@ import ProfileScreen from '../screens/ProfileScreen';
 import HomeScreen from '../screens/HomeScreen';
 import { storage } from '../configs/storage';
 import EditorScreen from '../screens/EditorScreen';
+import { NULL } from '../configs/constants';
 
 const FirstStack = createStackNavigator();
 
 const Router = () => {
   const firstIntro = storage.getBoolean('firstIntro');
-  const { isLogin } = useAccountValue();
-  const isGuest = storage.getBoolean('isGuest');
+  const { isLogin, isGuest } = useAccountValue();
 
   return (
     <FirstStack.Navigator screenOptions={{ headerShown: false }}>
-      {!firstIntro || isLogin === '' ? (
+      {!firstIntro || isLogin === NULL ? (
         <FirstStack.Screen name="IntroScreen" component={IntroScreen} />
       ) : (
         <>
-          {!isGuest && (
+          {isGuest === NULL ? (
             <FirstStack.Screen name="LoginScreen" component={LoginScreen} />
+          ) : (
+            <>
+              <FirstStack.Screen name="HomeScreen" component={HomeScreen} />
+              <FirstStack.Screen
+                name="ForgotPasswordScreen"
+                component={ForgotPasswordScreen}
+              />
+              <FirstStack.Screen
+                name="ProfileScreen"
+                component={ProfileScreen}
+              />
+              <FirstStack.Screen name="EditorScreen" component={EditorScreen} />
+            </>
           )}
-          <FirstStack.Screen name="HomeScreen" component={HomeScreen} />
-          <FirstStack.Screen
-            name="ForgotPasswordScreen"
-            component={ForgotPasswordScreen}
-          />
-          <FirstStack.Screen name="ProfileScreen" component={ProfileScreen} />
-          <FirstStack.Screen name="EditorScreen" component={EditorScreen} />
         </>
       )}
     </FirstStack.Navigator>

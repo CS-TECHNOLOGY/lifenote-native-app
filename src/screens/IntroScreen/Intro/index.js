@@ -24,7 +24,7 @@ const Intro = ({ onDone }) => {
         {'Your notes on your phone, your love and your life'}
       </Text>
       <ButtonCustomize
-        label={'Finish'}
+        label={'Start !'}
         background={Colors.CS_PURPLE}
         styleLabel={styles.label}
         rightItem={false}

@@ -27,4 +27,5 @@ export default {
   CREATE: require('./create.png'),
   SYNC_ACCOUNT: require('./syncAccount.png'),
   PENCIL: require('./pencil.png'),
+  MAINTAIN: require('./maintain.png'),
 };

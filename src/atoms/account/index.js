@@ -11,6 +11,7 @@ export const activeRouteState = atom({
   key: 'ACCOUNT',
   default: {
     isLogin: NULL,
+    isGuest: NULL,
   },
   effects_UNSTABLE: [persistAtom('isLogin')],
 });

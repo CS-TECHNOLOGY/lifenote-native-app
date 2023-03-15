@@ -83,7 +83,6 @@ const EditorScreen = () => {
       <Box width="100%" height="100%" background={Colors.TRANSPARENT}>
         <TextInput
           style={styles.title}
-          value={''}
           placeholder="New Title"
           numberOfLines={1}
         />
@@ -117,7 +116,7 @@ const EditorScreen = () => {
           selectedIconTint={Colors.CSS_BROWN}
           iconTint={Colors.CS_BLACK}
           actions={[
-            actions.insertImage,
+            Platform.OS === 'android' && actions.insertImage,
             actions.setBold,
             actions.setItalic,
             actions.insertBulletsList,
